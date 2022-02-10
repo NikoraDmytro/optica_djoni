@@ -1,0 +1,57 @@
+@use "../../../../shared/styles/base";
+
+.header {
+    @include base.flexCenter();
+    width: 100%;
+    height: 9em;
+    padding: 1.5em 6.25em;
+}
+
+.info {
+    margin-left: 8em;
+    @include base.flexCenter();
+    p {
+        margin-top: 0;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+}
+
+.location {
+    margin-right: 5.25em;
+}
+
+.workTime {
+    text-align: end;
+    margin-right: 4.75em;
+    p {
+        font-weight: 400;
+    }
+    span {
+        font-weight: 500;
+        margin-right: 10px;
+    }
+}
+
+.contacts {
+    border-radius: 5px;
+    margin-right: 3.75em;
+    padding: 0.5em 0.75em;
+    background-color: #E7F4F2;
+    div {
+        display: flex;
+        margin-bottom: 10px;
+        p {
+            margin: 0 10px;
+        }
+    }
+}
+
+.languageSelect {
+    width: 7em;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 0.5em 0.5em;
+    border: 1px solid #6E7A7C;
+    background-color: transparent;
+}

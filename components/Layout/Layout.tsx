@@ -3,8 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { ReactNode } from "react";
 
-import { Header } from "./components/Heder";
-import { Footer } from "./components/Footer";
+import { NavBar } from "./components/NavBar";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
 
 interface Props {
   children: ReactNode;
@@ -19,6 +20,7 @@ export const Layout = (props: Props) => {
       </Head>
 
       <Header />
+      <NavBar orientation="horizontal" />
 
       <main>{props.children}</main>
 
