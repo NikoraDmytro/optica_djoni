@@ -1,0 +1,40 @@
+@use "../../../shared/styles/variables";
+
+.questionForm {
+    width: 25em;
+    display: flex;
+    flex-direction: column;
+    button, input {
+        border: none;
+        outline: none;
+    }
+}
+
+.inputGroup {
+    display: flex;
+    margin-bottom: 1.5em;
+    flex-direction: column;
+    label {
+        color:white;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+    }
+    input {
+        font-size: 16px;
+        padding: 0.75em 1em;
+        color: variables.$secondary;
+    }
+}
+
+.submitButton {
+    width: 12.5em;
+    margin-top: 1em;
+    font-weight: 600;
+    padding: 0.75em 1.5em;
+    color: variables.$lightBlue;
+}
+
+.error {
+    color: red;
+}
