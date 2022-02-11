@@ -13,7 +13,7 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Image
-        src="/image/logo.png"
+        src="/image/logo.svg"
         alt="Logo"
         width={180}
         height={80}

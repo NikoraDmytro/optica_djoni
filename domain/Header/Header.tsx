@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Image
-        src="/image/logo.png"
+        src="/image/logo.svg"
         alt="Logo"
         width={180}
         height={80}

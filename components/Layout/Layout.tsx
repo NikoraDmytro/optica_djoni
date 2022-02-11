@@ -6,6 +6,7 @@ import styles from "./Layout.module.scss";
 import { Footer } from "../../domain/Footer";
 import { Header } from "../../domain/Header";
 import { NavBar } from "../../domain/NavBar";
+import { AskQuestion } from "../../domain/AskQuestion";
 
 interface Props {
   children: ReactNode;
@@ -25,7 +26,10 @@ export const Layout = (props: Props) => {
         <NavBar orientation="horizontal" />
       </div>
 
-      <main>{props.children}</main>
+      <main className={styles.mainContent}>
+        {props.children}
+        <AskQuestion />
+      </main>
 
       <Footer />
     </div>
