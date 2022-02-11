@@ -17,7 +17,6 @@ export const Footer = () => {
         width={180}
         height={80}
         layout="fixed"
-        className={styles.footerLogo}
       />
 
       <div className={styles.footerContent}>
@@ -27,7 +26,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <strong className={styles.workingHoursTitle}>Как работаем?</strong>
+            <strong className={styles.strongBlock}>Как работаем?</strong>
             <CompanyWorkingHours />
           </div>
         </div>
@@ -38,7 +37,9 @@ export const Footer = () => {
           </div>
 
           <div className={styles.companySocialMedia}>
-            <strong>Мы в социальных сетях:</strong>
+            <strong className={styles.strongBlock}>
+              Мы в социальных сетях:
+            </strong>
 
             <div className={styles.icons}>
               <Image
@@ -46,7 +47,6 @@ export const Footer = () => {
                 alt="instagram"
                 width={24}
                 height={24}
-                className={styles.icon}
               />
 
               <Image
@@ -54,7 +54,6 @@ export const Footer = () => {
                 alt="facebook"
                 width={24}
                 height={24}
-                className={styles.icon}
               />
             </div>
           </div>

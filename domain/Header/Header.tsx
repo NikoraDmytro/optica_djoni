@@ -17,7 +17,6 @@ export const Header = () => {
         width={180}
         height={80}
         layout="fixed"
-        className={styles.headerLogo}
       />
 
       <div className={styles.location}>
@@ -32,8 +31,8 @@ export const Header = () => {
         <CompanyContacts />
       </div>
 
-      <div className={styles.siteLanguage}>
-        <strong>Язык сайта</strong>
+      <div>
+        <strong className={styles.strongBlock}>Язык сайта</strong>
 
         <select id="language" className={styles.selectInput}>
           <option id="language">Русский</option>

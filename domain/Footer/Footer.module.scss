@@ -1,3 +1,5 @@
+@use "../../shared/styles/components";
+
 .footer {
   position: absolute;
   left: 0;
@@ -17,29 +19,20 @@
 }
 
 .footerInfoBlock {
-    display: flex;
-    margin-right: 7.5em;
-    flex-direction: column;
-    > div {
-        margin-bottom: 1.5em
-    }
+  display: flex;
+  margin-right: 7.5em;
+  flex-direction: column;
+  > div {
+    margin-bottom: 1.5em;
   }
-
-.workingHoursTitle {
-    display: block;
-    margin-bottom: 10px; 
 }
 
 .companySocialMedia {
-  strong {
-    display: block;
-    margin-bottom: 10px;
-  }
   .icons {
     display: flex;
     flex-direction: row;
     > span {
-        margin-right: 10px !important;
+      margin-right: 10px !important;
     }
   }
 }
