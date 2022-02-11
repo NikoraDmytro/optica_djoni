@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { NavBar } from "../NavBar";
 import {
   CompanyContacts,
   CompanyLocation,
@@ -20,6 +21,10 @@ export const Footer = () => {
       />
 
       <div className={styles.footerContent}>
+        <div className={styles.footerInfoBlock}>
+          <NavBar orientation="vertical" />
+        </div>
+
         <div className={styles.footerInfoBlock}>
           <div>
             <CompanyLocation />

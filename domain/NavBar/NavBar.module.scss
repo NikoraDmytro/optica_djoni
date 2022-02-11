@@ -1,0 +1,21 @@
+.navBar {
+  display: flex;
+  font-weight: 500;
+}
+
+.horizontalNavBar {
+  text-align: center;
+  flex-direction: row;
+  .separator {
+    height: 1.375em;
+    border-right: 1px solid rgba(110, 122, 124, 0.4);
+  }
+}
+
+.verticalNavBar {
+  text-align: start;
+  flex-direction: column;
+  .separator {
+    height: 1.5em;
+  }
+}
