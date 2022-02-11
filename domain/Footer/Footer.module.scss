@@ -1,0 +1,45 @@
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25em;
+  display: flex;
+  padding-top: 5em;
+  padding-left: 7.5em;
+  flex-direction: row;
+  background-color: white;
+}
+
+.footerContent {
+  display: flex;
+  margin-left: 11.875em;
+}
+
+.footerInfoBlock {
+    display: flex;
+    margin-right: 7.5em;
+    flex-direction: column;
+    > div {
+        margin-bottom: 1.5em
+    }
+  }
+
+.workingHoursTitle {
+    display: block;
+    margin-bottom: 10px; 
+}
+
+.companySocialMedia {
+  strong {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    > span {
+        margin-right: 10px !important;
+    }
+  }
+}
