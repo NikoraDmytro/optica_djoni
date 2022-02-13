@@ -1,0 +1,12 @@
+.slider {
+  width: 100%;
+  white-space: nowrap;
+  .sliderData {
+    opacity: 17%;
+    margin-left: 2.5em;
+    display: inline-block;
+  }
+  .active {
+    opacity: 1;
+  }
+}

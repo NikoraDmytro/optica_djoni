@@ -6,6 +6,7 @@ import styles from "./Layout.module.scss";
 import { Footer } from "../../domain/Footer";
 import { Header } from "../../domain/Header";
 import { NavBar } from "../../domain/NavBar";
+import { ImageSlider } from "../../domain/ImageSlider";
 import { AskQuestion } from "../../domain/AskQuestion";
 
 interface Props {
@@ -25,6 +26,8 @@ export const Layout = (props: Props) => {
       <div className={styles.navBarContainer}>
         <NavBar orientation="horizontal" />
       </div>
+
+      <ImageSlider />
 
       <main className={styles.mainContent}>
         {props.children}
