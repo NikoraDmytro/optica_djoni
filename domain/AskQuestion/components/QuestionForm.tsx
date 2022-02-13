@@ -10,6 +10,10 @@ const initialValues = {
 };
 
 export const QuestionForm = () => {
+  const renderError = (message: string) => (
+    <strong className={styles.error}>{message}</strong>
+  );
+
   return (
     <Formik
       initialValues={initialValues}
@@ -25,13 +29,21 @@ export const QuestionForm = () => {
         <div className={styles.inputGroup}>
           <label htmlFor="userName">Имя</label>
           <Field placeholder="Имя" name="userName" />
-          <ErrorMessage name="userName" className={styles.error} />
+          <ErrorMessage
+            name="userName"
+            className={styles.error}
+            render={renderError}
+          />
         </div>
 
         <div className={styles.inputGroup}>
           <label htmlFor="phoneNumber">Номер телефона</label>
-          <input placeholder="+380" name="phoneNumber" />
-          <ErrorMessage name="phoneNumber" className={styles.error} />
+          <Field placeholder="+380" name="phoneNumber" />
+          <ErrorMessage
+            name="phoneNumber"
+            className={styles.error}
+            render={renderError}
+          />
         </div>
 
         <button type="submit" className={styles.submitButton}>
