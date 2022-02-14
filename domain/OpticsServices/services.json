@@ -1,0 +1,30 @@
+[
+    {
+        "title": "АППАРАТНОЕ ЛЕЧЕНИЕ",
+        "iconUrl": "/icons/eye_2.svg"
+    },
+    {
+        "title": "ВЗРОСЛАЯ ОФТАЛЬМОЛОГИЯ",
+        "iconUrl": "/icons/doctor.svg"
+    },
+    {
+        "title": "ДЕТСКАЯ ОФТАЛЬМОЛОГИЯ",
+        "iconUrl": "/icons/child_ophthalmology.svg"
+    },
+    {
+        "title": "КОНТАКТНАЯ КОРРЕКЦИЯ",
+        "iconUrl": "/icons/eye.svg"
+    },
+    {
+        "title": "ОПТИКА",
+        "iconUrl": "/icons/glasses.svg"
+    },
+    {
+        "title": "НОЧНАЯ ЛИНЗА",
+        "iconUrl": "/icons/eyeglass.svg"
+    },
+    {
+        "title": "МАСТЕРСКАЯ",
+        "iconUrl": "/icons/workshop.svg"
+    }
+]

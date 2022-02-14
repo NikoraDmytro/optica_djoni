@@ -1,0 +1,38 @@
+@use "../../shared/styles/variables";
+
+.opticsStuffContainer {
+  width: 100%;
+  margin: auto;
+  max-width: 1400px;
+  padding: 5em 6.5em;
+  background-color: white;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.employeesBlock {
+  gap: 2em;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.employeeName {
+  font-size: 24px;
+  margin-top: 1em;
+  font-weight: 700;
+}
+
+.employeeSpecialization {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: variables.$secondary;
+}
+
+.employeeExperience {
+  font-weight: 600;
+}

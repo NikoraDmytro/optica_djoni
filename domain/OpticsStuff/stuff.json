@@ -1,0 +1,20 @@
+[
+    {
+        "photo": "/image/doctor_1.png",
+        "name": "Фамилия Имя Отчество",
+        "specialization": "Детский доктор офтальмолог",
+        "experience": 28
+    },
+    {
+        "photo": "/image/doctor_2.png",
+        "name": "Фамилия Имя Отчество",
+        "specialization": "Взрослый доктор офтальмолог",
+        "experience": 29
+    },
+    {
+        "photo": "/image/doctor_3.png",
+        "name": "Фамилия Имя Отчество",
+        "specialization": "Текст для примера текст для примера текст",
+        "experience": 8
+    }
+]
