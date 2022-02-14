@@ -1,12 +1,16 @@
 .slider {
   width: 100%;
+  transition: 0.4s;
+  max-width: 1800px;
   white-space: nowrap;
-  .sliderData {
-    opacity: 17%;
-    margin-left: 2.5em;
-    display: inline-block;
-  }
-  .active {
-    opacity: 1;
-  }
+}
+
+.imageContainer {
+  opacity: 17%;
+  margin-right: 2em;
+  display: inline-block;
+}
+
+.currentImage {
+  opacity: 1;
 }

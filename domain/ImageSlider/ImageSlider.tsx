@@ -1,70 +1,49 @@
-import Image from "next/image";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import classNames from "classnames";
+
+import imageUrls from "./imageUrls.json";
 
 import styles from "./ImageSlider.module.scss";
 
 const IMAGE_WIDTH = 914;
 const IMAGE_HEIGHT = 625;
 
-const IMAGE_URLS = [
-  "/image/flowers_0.jpg",
-  "/image/flowers_1.jpg",
-  "/image/flowers_2.jpg",
-  "/image/flowers_3.jpg",
-  "/image/flowers_4.jpg",
-];
-
-const getImageClassName = (isActive: Boolean) => {
-  return classNames({
-    [styles.sliderData]: true,
-    [styles.active]: isActive,
-  });
-};
-
-const renderSliderImage = (url: string, isActive: boolean) => {
-  const className = getImageClassName(isActive);
-  const key = url.replace(/.+\//, "").replace(/\.\w+$/, "");
-
-  return (
-    <div key={key} className={className}>
-      <Image src={url} alt={key} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
-    </div>
-  );
-};
-
 export const ImageSlider = () => {
-  const [active, setActive] = useState(0);
-  const imagesList: React.ReactNode[] = [];
+  const [current, setCurrent] = useState(0);
 
-  const total = IMAGE_URLS.length;
-  const half = Math.floor(total / 2);
-  const last = (active + half) % total;
-
-  let i = last;
-
-  do {
-    i = (i + 1) % total;
-    const isActive = i === active;
-    const url = IMAGE_URLS[i];
-
-    imagesList.push(renderSliderImage(url, isActive));
-  } while (i !== last);
+  const total = imageUrls.length;
+  const translateValue = -IMAGE_WIDTH * (current - 0.6);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setActive((active + 1) % total);
-    }, 10000);
+      setCurrent((current + 1) % total);
+    }, 5000);
 
     return () => clearTimeout(timeout);
-  }, [active]);
+  }, [current, total]);
+
+  const renderSliderImage = (url: string, index: number) => {
+    const name = url.replace(/.+\//, "").replace(/\.\w+$/, "");
+
+    return (
+      <div
+        className={classNames({
+          [styles.imageContainer]: true,
+          [styles.currentImage]: index === current,
+        })}
+      >
+        <Image src={url} alt={name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
+      </div>
+    );
+  };
 
   return (
     <div
       className={styles.slider}
-      style={{ transform: `translateX(${-IMAGE_WIDTH * (half - 0.75)}px)` }}
+      style={{ transform: `translateX(${translateValue}px)` }}
     >
-      {imagesList}
+      {imageUrls.map(renderSliderImage)}
     </div>
   );
 };
