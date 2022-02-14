@@ -4,7 +4,7 @@ import {
   CompanyContacts,
   CompanyLocation,
   CompanyWorkingHours,
-} from "../../components/CompanyInfo";
+} from "../../../../components/CompanyInfo";
 
 import styles from "./Header.module.scss";
 

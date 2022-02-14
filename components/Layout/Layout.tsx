@@ -3,13 +3,14 @@ import Head from "next/head";
 
 import styles from "./Layout.module.scss";
 
-import { Footer } from "../../domain/Footer";
-import { Header } from "../../domain/Header";
-import { NavBar } from "../../domain/NavBar";
-import { ImageSlider } from "../../domain/ImageSlider";
-import { AskQuestion } from "../../domain/AskQuestion";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { NavBar } from "./components/NavBar";
+import { ImageSlider } from "./components/ImageSlider";
+import { AskQuestion } from "./components/AskQuestion";
 
 interface Props {
+  home?: boolean;
   children: ReactNode;
 }
 
@@ -27,7 +28,7 @@ export const Layout = (props: Props) => {
         <NavBar orientation="horizontal" />
       </div>
 
-      <ImageSlider />
+      {props.home && <ImageSlider />}
 
       <main className={styles.mainContent}>
         {props.children}

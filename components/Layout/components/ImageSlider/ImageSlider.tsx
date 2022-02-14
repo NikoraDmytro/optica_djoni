@@ -27,7 +27,7 @@ export const ImageSlider = () => {
   }, [current, total]);
 
   return (
-    <>
+    <div className={styles.sliderWrapper}>
       <SideText />
       <div
         className={styles.slider}
@@ -36,14 +36,10 @@ export const ImageSlider = () => {
         }}
       >
         {imageUrls.map((url, index) => (
-          <SliderImage
-            key={url}
-            url={url}
-            isCurrent={index === current}
-          />
+          <SliderImage key={url} url={url} isCurrent={index === current} />
         ))}
       </div>
       <Switchers current={current} changeCurrent={changeCurrent} />
-    </>
+    </div>
   );
 };

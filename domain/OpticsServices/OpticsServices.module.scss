@@ -1,0 +1,36 @@
+@use "../../shared/styles/variables";
+
+.servicesContainer {
+  margin: auto;
+}
+
+.introductoryText {
+  h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+  p {
+    font-weight: 500;
+  }
+}
+
+.serviceBlock {
+  display: flex;
+  height: 308px;
+  padding: 30px;
+  flex-direction: column;
+  background-color: white;
+}
+
+.serviceName {
+  font-size: 20px;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+.learnMoreButton {
+  width: 100%;
+  margin-top: auto;
+}

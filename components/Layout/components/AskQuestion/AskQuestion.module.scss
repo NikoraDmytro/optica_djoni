@@ -1,9 +1,10 @@
-@use "../../shared/styles/base";
-@use "../../shared/styles/variables";
+@use "../../../../shared/styles/base";
+@use "../../../../shared/styles/variables";
 
 .AskQuestionContainer {
     width: 100%;
     display: flex;
+    margin-top: 5em;
     height: 30.125em;
     flex-direction: row;
     > div {

@@ -5,7 +5,7 @@ import {
   CompanyContacts,
   CompanyLocation,
   CompanyWorkingHours,
-} from "../../components/CompanyInfo";
+} from "../../../../components/CompanyInfo";
 
 import styles from "./Footer.module.scss";
 
