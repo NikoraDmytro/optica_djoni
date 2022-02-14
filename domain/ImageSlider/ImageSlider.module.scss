@@ -1,16 +1,8 @@
 .slider {
   width: 100%;
-  transition: 0.4s;
+  margin: auto;
+  overflow: visible;
   max-width: 1800px;
   white-space: nowrap;
-}
-
-.imageContainer {
-  opacity: 17%;
-  margin-right: 2em;
-  display: inline-block;
-}
-
-.currentImage {
-  opacity: 1;
+  transition-duration: 1.2s;
 }

@@ -25,6 +25,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   background-color: #fafafa;
   font-family: "Montserrat", Helvetica Neue, sans-serif;
   color: variables.$primary;

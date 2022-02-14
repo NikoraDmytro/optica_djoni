@@ -1,49 +1,49 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import classNames from "classnames";
+
+import { SideText } from "./components/SideText";
+import { Switchers } from "./components/Switchers";
+import { SliderImage, IMAGE_WIDTH } from "./components/SliderImage";
 
 import imageUrls from "./imageUrls.json";
 
 import styles from "./ImageSlider.module.scss";
 
-const IMAGE_WIDTH = 914;
-const IMAGE_HEIGHT = 625;
-
 export const ImageSlider = () => {
   const [current, setCurrent] = useState(0);
 
   const total = imageUrls.length;
-  const translateValue = -IMAGE_WIDTH * (current - 0.6);
+  const translateValue = -IMAGE_WIDTH * current;
+
+  const changeCurrent = (index: number) => {
+    setCurrent(index);
+  };
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCurrent((current + 1) % total);
-    }, 5000);
+    }, 10000);
 
     return () => clearTimeout(timeout);
   }, [current, total]);
 
-  const renderSliderImage = (url: string, index: number) => {
-    const name = url.replace(/.+\//, "").replace(/\.\w+$/, "");
-
-    return (
-      <div
-        className={classNames({
-          [styles.imageContainer]: true,
-          [styles.currentImage]: index === current,
-        })}
-      >
-        <Image src={url} alt={name} width={IMAGE_WIDTH} height={IMAGE_HEIGHT} />
-      </div>
-    );
-  };
-
   return (
-    <div
-      className={styles.slider}
-      style={{ transform: `translateX(${translateValue}px)` }}
-    >
-      {imageUrls.map(renderSliderImage)}
-    </div>
+    <>
+      <SideText />
+      <div
+        className={styles.slider}
+        style={{
+          transform: `translateX(calc(${translateValue}px + 40%))`,
+        }}
+      >
+        {imageUrls.map((url, index) => (
+          <SliderImage
+            key={url}
+            url={url}
+            isCurrent={index === current}
+          />
+        ))}
+      </div>
+      <Switchers current={current} changeCurrent={changeCurrent} />
+    </>
   );
 };
