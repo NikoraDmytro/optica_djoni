@@ -1,0 +1,65 @@
+@use "./../../shared/styles/variables";
+
+.frequentQuestionsContainer {
+  margin: auto;
+  max-width: 1400px;
+  padding: 5em 6.5em;
+  background-color: white;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.questionBlock {
+  padding: 1em;
+  margin-bottom: 1.5em;
+  background-color: #e7f4f2;
+  h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &.opened {
+    background-color: white;
+    border: 1px solid variables.$lightBlue;
+    h2 {
+      font-weight: 700;
+    }
+  }
+}
+
+.questionBlockHeader {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.showAnswerButton {
+  $color: #232323;
+  padding: 0;
+  width: 12px;
+  height: 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-right: 0.75em;
+  transform: rotate(45deg);
+  transition-duration: 0.25s;
+  border-top: 2px solid $color;
+  background-color: transparent;
+  border-left: 2px solid $color;
+  &.active {
+    transform: rotate(-135deg);
+  }
+}
+
+.answer {
+  font-size: 18px;
+  margin-top: 16px;
+  line-height: 1.5em;
+}

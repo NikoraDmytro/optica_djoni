@@ -3,9 +3,11 @@
 
 .AskQuestionContainer {
     width: 100%;
+    margin: auto;
     display: flex;
     margin-top: 5em;
     height: 30.125em;
+    max-width: 1400px;
     flex-direction: row;
     > div {
         @include base.flexCenter();
