@@ -1,0 +1,20 @@
+@use "../../../shared/styles/variables";
+
+.comment {
+  z-index: 4;
+  width: 940px;
+  margin: 2.5em;
+  padding: 1.5em;
+  border-radius: 5px;
+  line-height: 1.5em;
+  margin-bottom: 3.5em;
+  background-color: white;
+}
+
+.textExpander {
+  cursor: pointer;
+  line-height: 1.5em;
+  background-color: white;
+  color: variables.$lightBlue;
+  text-decoration: underline solid variables.$lightBlue 1px;
+}
