@@ -30,11 +30,12 @@ const Question = ({ question }: { question: Question }) => {
   };
 
   return (
-    <div className={className}>
+    <div className={className} onClick={handleClick} >
       <div className={styles.questionBlockHeader}>
         <h2>{question.text}</h2>
-        <button onClick={handleClick} className={buttonClassName} />
+        <button className={buttonClassName} />
       </div>
+      
       {opened ? <p className={styles.answer}>{question.answer}</p> : null}
     </div>
   );

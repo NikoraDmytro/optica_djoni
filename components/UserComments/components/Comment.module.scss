@@ -1,14 +1,22 @@
 @use "../../../shared/styles/variables";
-
 .comment {
   z-index: 4;
   width: 940px;
   margin: 2.5em;
   padding: 1.5em;
   border-radius: 5px;
-  line-height: 1.5em;
   margin-bottom: 3.5em;
   background-color: white;
+}
+
+.commentText {
+  line-height: 1.5em;
+  &.short {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+  }
 }
 
 .textExpander {
