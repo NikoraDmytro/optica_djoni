@@ -1,9 +1,10 @@
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
 
-import { Layout } from '../components/Layout'
+import { Layout } from "../components/Layout";
 
-import { OpticsStuff } from '../domain/OpticsStuff';
-import { OpticsServices } from '../domain/OpticsServices';
+import { OpticsStuff } from "../domain/OpticsStuff";
+import { OpticsServices } from "../domain/OpticsServices";
+import { UserComments } from "../components/UserComments/UserComments";
 
 const Home: NextPage = () => {
   return (
@@ -11,8 +12,10 @@ const Home: NextPage = () => {
       <OpticsServices />
 
       <OpticsStuff />
-    </Layout>
-  )
-}
 
-export default Home
+      <UserComments />
+    </Layout>
+  );
+};
+
+export default Home;
