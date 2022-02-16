@@ -1,0 +1,46 @@
+@use "../../shared/styles/base";
+@use "../../shared/styles/variables";
+
+.wrapper {
+  @include base.flexCenter();
+  width: 100%;
+  height: 40em;
+  background-size: cover;
+  background-position: center;
+}
+
+.pageIntroductionContainer {
+  width: 75%;
+  padding: 2em;
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.7);
+  span {
+    margin-right: 2em !important;
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  font-family: 700;
+  margin-bottom: 0.5em;
+}
+
+.navigationLinks {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
+
+.navigationLink {
+  padding: 0.625em;
+  font-weight: 500;
+  line-height: 22px;
+  border-radius: 2px;
+  margin-right: 1.5em;
+  color: variables.$darkBlue;
+  background-color: variables.$lightGreen;
+}

@@ -24,6 +24,8 @@ export const Layout = (props: LayoutProps) => {
         <NavBar currentPage={props.page} orientation="horizontal" />
       </div>
 
+      {props.pageIntroduction}
+
       <main className={styles.mainContent}>
         {props.children}
         <AskQuestion />
