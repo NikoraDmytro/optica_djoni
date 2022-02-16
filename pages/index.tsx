@@ -26,7 +26,9 @@ const frequentQuestions = [
 
 const Home: NextPage = () => {
   return (
-    <Layout page="home" pageIntroduction={<ImageSlider />}>
+    <Layout page="home">
+      <ImageSlider />
+
       <OpticsServices />
 
       <OpticsStuff />

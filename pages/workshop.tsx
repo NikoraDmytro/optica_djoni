@@ -10,8 +10,8 @@ function Workshop() {
   return (
     <Layout
       page="workshop"
-      pageIntroduction={
-        <PageIntroduction
+    >
+      <PageIntroduction
           page="Оптика"
           pageIcon={workshopIcon}
           backgroundImageUrl={backgroundImageUrl}
@@ -21,9 +21,6 @@ function Workshop() {
             "Линзы для очков",
           ]}
         />
-      }
-    >
-      <div>Hello workshop!</div>
     </Layout>
   );
 }

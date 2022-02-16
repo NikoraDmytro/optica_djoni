@@ -10,8 +10,8 @@ function AdultOphthalmology() {
   return (
     <Layout
       page="adult_ophthalmology"
-      pageIntroduction={
-        <PageIntroduction
+    >
+      <PageIntroduction
           page="Оптика"
           pageIcon={doctorIcon}
           backgroundImageUrl={backgroundImageUrl}
@@ -21,9 +21,6 @@ function AdultOphthalmology() {
             "Линзы для очков",
           ]}
         />
-      }
-    >
-      <div>Hello adult ophthalmology!</div>
     </Layout>
   );
 }

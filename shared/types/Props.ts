@@ -11,7 +11,6 @@ export type PageName =
 export type LayoutProps = {
   page: PageName;
   children: ReactNode;
-  pageIntroduction: ReactNode;
 };
 
 export type NavBarProps = {

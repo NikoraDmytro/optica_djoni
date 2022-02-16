@@ -10,8 +10,8 @@ function Optics() {
   return (
     <Layout
       page="optics"
-      pageIntroduction={
-        <PageIntroduction
+    >
+      <PageIntroduction
           page="Оптика"
           pageIcon={glassesIcon}
           backgroundImageUrl={backgroundImageUrl}
@@ -21,9 +21,6 @@ function Optics() {
             "Линзы для очков",
           ]}
         />
-      }
-    >
-      Hello Optics!
     </Layout>
   );
 }

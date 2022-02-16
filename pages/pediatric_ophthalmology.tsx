@@ -10,8 +10,8 @@ function PediatricOphthalmology() {
   return (
     <Layout
       page="pediatric_ophthalmology"
-      pageIntroduction={
-        <PageIntroduction
+    >
+      <PageIntroduction
           page="Оптика"
           pageIcon={pediatricOphthalmologyIcon}
           backgroundImageUrl={backgroundImageUrl}
@@ -21,9 +21,6 @@ function PediatricOphthalmology() {
             "Линзы для очков",
           ]}
         />
-      }
-    >
-      <div>Hello pediatric ophthalmology!</div>
     </Layout>
   );
 }

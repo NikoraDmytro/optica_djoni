@@ -10,8 +10,8 @@ function NightEyeglass() {
   return (
     <Layout
       page="night_eyeglass"
-      pageIntroduction={
-        <PageIntroduction
+    >
+      <PageIntroduction
           page="Оптика"
           pageIcon={eyeGlassIcon}
           backgroundImageUrl={backgroundImageUrl}
@@ -21,9 +21,6 @@ function NightEyeglass() {
             "Линзы для очков",
           ]}
         />
-      }
-    >
-      <div>Hello eyeglass</div>
     </Layout>
   );
 }
