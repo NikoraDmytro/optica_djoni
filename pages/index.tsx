@@ -6,6 +6,7 @@ import { OpticsStuff } from "../domain/OpticsStuff";
 import { OpticsServices } from "../domain/OpticsServices";
 import { FrequentQuestion } from "../components/FrequentQuestions";
 import { UserComments } from "../components/UserComments/UserComments";
+import { ImageSlider } from "../domain/ImageSlider";
 
 const frequentQuestions = [
   {
@@ -25,7 +26,9 @@ const frequentQuestions = [
 
 const Home: NextPage = () => {
   return (
-    <Layout home>
+    <Layout page="home">
+      <ImageSlider />
+
       <OpticsServices />
 
       <OpticsStuff />

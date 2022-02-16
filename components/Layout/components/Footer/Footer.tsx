@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { PageName } from "../../../../shared/types/Props";
+
 import { NavBar } from "../NavBar";
 import {
   CompanyContacts,
@@ -9,7 +11,7 @@ import {
 
 import styles from "./Footer.module.scss";
 
-export const Footer = () => {
+export const Footer = ({ page }: { page: PageName }) => {
   return (
     <footer className={styles.footer}>
       <Image
@@ -22,7 +24,7 @@ export const Footer = () => {
 
       <div className={styles.footerContent}>
         <div className={styles.footerInfoBlock}>
-          <NavBar orientation="vertical" />
+          <NavBar currentPage={page} orientation="vertical" />
         </div>
 
         <div className={styles.footerInfoBlock}>

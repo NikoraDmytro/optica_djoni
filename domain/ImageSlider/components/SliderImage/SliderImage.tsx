@@ -2,7 +2,7 @@ import Image from "next/image";
 import classNames from "classnames";
 
 import styles from "./SliderImage.module.scss";
-import { getImageName } from "../../../../../../utils/getImageName";
+import { getImageName } from "../../../../utils/getImageName";
 
 export const IMAGE_WIDTH = 914;
 export const IMAGE_HEIGHT = 625;

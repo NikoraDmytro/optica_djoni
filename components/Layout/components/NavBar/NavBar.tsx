@@ -1,38 +1,56 @@
 import Link from "next/link";
 import classNames from "classnames";
 
+import { NavBarProps, PageName } from "../../../../shared/types/Props";
+
 import styles from "./NavBar.module.scss";
 
-interface Props {
-  orientation: "horizontal" | "vertical";
-}
-
-export const NavBar = ({ orientation }: Props) => {
+export const NavBar = ({ orientation, currentPage }: NavBarProps) => {
   const navBarClass = classNames({
     [styles.navBar]: true,
     [styles.verticalNavBar]: orientation === "vertical",
     [styles.horizontalNavBar]: orientation === "horizontal",
   });
 
+  const getLinkClassName = (pageName: PageName) => {
+    return classNames({
+      [styles.activeLink]: pageName === currentPage,
+    });
+  };
+
   return (
     <nav className={navBarClass}>
-      <Link href="/">ДЕТСКАЯ ОФТАЛЬМОЛОГИЯ</Link>
+      <Link href="/pediatric_ophthalmology">
+        <a className={getLinkClassName("pediatric_ophthalmology")}>
+          ДЕТСКАЯ ОФТАЛЬМОЛОГИЯ
+        </a>
+      </Link>
 
       <span className={styles.separator} />
 
-      <Link href="/">ВЗРОСЛАЯ ОФТАЛЬМОЛОГИЯ</Link>
+      <Link href="/adult_ophthalmology">
+        <a className={getLinkClassName("adult_ophthalmology")}>
+          ВЗРОСЛАЯ ОФТАЛЬМОЛОГИЯ
+        </a>
+      </Link>
 
-      <span className={styles.separator}/>
+      <span className={styles.separator} />
 
-      <Link href="/">НОЧНАЯ ЛИНЗЫ</Link>
+      <Link href="/night_eyeglass">
+        <a className={getLinkClassName("night_eyeglass")}>НОЧНАЯ ЛИНЗЫ</a>
+      </Link>
 
       <span className={styles.separator} />
 
-      <Link href="/">ОПТИКА</Link>
+      <Link href="/optics">
+        <a className={getLinkClassName("optics")}>ОПТИКА</a>
+      </Link>
 
       <span className={styles.separator} />
-      
-      <Link href="/">МАСТЕРСКАЯ</Link>
+
+      <Link href="/workshop">
+        <a className={getLinkClassName("workshop")}>МАСТЕРСКАЯ</a>
+      </Link>
     </nav>
   );
 };
