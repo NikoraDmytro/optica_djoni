@@ -1,5 +1,24 @@
+@use "./variables";
+
 .strongBlock {
     display: block;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+%blockContainer {
+    margin: auto;
+    max-width: 1400px;
+    margin-bottom: 5em;
+    padding: 5em 6.25em;
+}
+
+.container_blue {
+    @extend %blockContainer;
+    background-color: variables.$lightBlue-background;
+}
+
+.container_white {
+    @extend %blockContainer;
+    background-color: white;
 }

@@ -1,6 +1,8 @@
 import { Layout } from "../components/Layout";
 import { PageIntroduction } from "../components/PageIntroduction";
 
+import { OpticsBenefits } from "../domain/OpticsBenefits";
+
 import glassesIcon from "../public/icons/glasses.svg";
 
 function Optics() {
@@ -21,6 +23,8 @@ function Optics() {
             "Линзы для очков",
           ]}
         />
+
+        <OpticsBenefits />
     </Layout>
   );
 }
