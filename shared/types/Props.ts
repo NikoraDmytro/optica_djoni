@@ -24,3 +24,10 @@ export type PageIntroductionProps = {
   backgroundImageUrl: string;
   navigationLinks: string[];
 }
+
+export type SliderProps = {
+  width: number;
+  height: number;
+  children: ReactNode[];
+  sideContent?: ReactNode;
+}

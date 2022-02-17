@@ -6,7 +6,7 @@ import { OpticsStuff } from "../domain/OpticsStuff";
 import { OpticsServices } from "../domain/OpticsServices";
 import { FrequentQuestion } from "../components/FrequentQuestions";
 import { UserComments } from "../components/UserComments/UserComments";
-import { ImageSlider } from "../domain/ImageSlider";
+import { ImageSlider } from "../components/ImageSlider";
 
 const frequentQuestions = [
   {

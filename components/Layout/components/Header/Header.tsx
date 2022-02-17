@@ -1,23 +1,28 @@
+import Link from "next/link";
 import Image from "next/image";
 
 import {
   CompanyContacts,
   CompanyLocation,
   CompanyWorkingHours,
-} from "../../../../components/CompanyInfo";
+} from "../CompanyInfo";
 
 import styles from "./Header.module.scss";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <Image
-        src="/image/logo.svg"
-        alt="Logo"
-        width={180}
-        height={80}
-        layout="fixed"
-      />
+      <Link href="/">
+        <a>
+          <Image
+            src="/image/logo.svg"
+            alt="Logo"
+            width={180}
+            height={80}
+            layout="fixed"
+          />
+        </a>
+      </Link>
 
       <div className={styles.location}>
         <CompanyLocation />
