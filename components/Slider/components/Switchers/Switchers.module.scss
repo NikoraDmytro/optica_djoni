@@ -1,8 +1,10 @@
 .switchersList {
   padding: 0;
+  display: flex;
   margin-top: 1em;
-  padding-left: 65%;
+  flex-direction: row;
   list-style-type: none;
+  justify-content: center;
 }
 
 .switcher {

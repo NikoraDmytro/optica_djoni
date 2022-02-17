@@ -28,6 +28,6 @@ export type PageIntroductionProps = {
 export type SliderProps = {
   width: number;
   height: number;
+  margin: number;
   children: ReactNode[];
-  sideContent?: ReactNode;
 }

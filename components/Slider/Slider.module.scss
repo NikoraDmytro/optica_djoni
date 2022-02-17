@@ -1,0 +1,28 @@
+.sliderContainer {
+  width: 100%;
+  margin-bottom: 8.375em;
+}
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sliderContent {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.5s ease;
+  &.noTransition {
+    transition: none;
+  }
+}
+
+.sliderItem {
+  opacity: 0.2;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.sliderItem.current {
+  opacity: 1;
+}

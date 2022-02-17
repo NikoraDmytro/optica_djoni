@@ -1,12 +1,14 @@
+import Image from "next/image";
 import type { NextPage } from "next";
 
 import { Layout } from "../components/Layout";
 
 import { OpticsStuff } from "../domain/OpticsStuff";
 import { OpticsServices } from "../domain/OpticsServices";
+
+import { Slider } from "../components/Slider";
 import { FrequentQuestion } from "../components/FrequentQuestions";
 import { UserComments } from "../components/UserComments/UserComments";
-import { ImageSlider } from "../components/ImageSlider";
 
 const frequentQuestions = [
   {
@@ -27,7 +29,13 @@ const frequentQuestions = [
 const Home: NextPage = () => {
   return (
     <Layout page="home">
-      <ImageSlider />
+      <Slider width={914} height={635} margin={32}>
+        <Image src="/image/optica_0.jpeg" alt="" layout="fill" />
+        <Image src="/image/optica_1.jpeg" alt="" layout="fill" />
+        <Image src="/image/optica_2.jpeg" alt="" layout="fill" />
+        <Image src="/image/optica_3.jpeg" alt="" layout="fill" />
+        <Image src="/image/optica_3.jpeg" alt="" layout="fill" />
+      </Slider>
 
       <OpticsServices />
 
