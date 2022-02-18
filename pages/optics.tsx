@@ -3,6 +3,7 @@ import { Layout } from "../components/Layout";
 import { PageIntroduction } from "../components/PageIntroduction";
 
 import { OpticsBenefits } from "../domain/OpticsBenefits";
+import { OpticsPartners } from "../domain/OpticsPartners";
 
 import glassesIcon from "../public/icons/glasses.svg";
 
@@ -24,6 +25,8 @@ function Optics() {
       />
 
       <OpticsBenefits />
+
+      <OpticsPartners />
     </Layout>
   );
 }

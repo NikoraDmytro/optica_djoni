@@ -1,0 +1,38 @@
+@use "../../../../shared/styles/base";
+
+.partnersBlockContainer {
+  @include base.flexCenter(column);
+  width: 100%;
+  padding: 5em 0;
+  margin-bottom: 5em;
+  background-color: white;
+  > * {
+    max-width: 1200px;
+  }
+  p {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-bottom: 47px;
+    &.small {
+      font-size: 16px;
+    }
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 1.25em;
+}
+
+.partnersBrandIcons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

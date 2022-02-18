@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import classNames from "classnames";
 
 import { Switchers } from "./components/Switchers";
 
@@ -6,11 +7,10 @@ import styles from "./Slider.module.scss";
 
 import { useCarousel } from "./utils/useCarousel";
 
-import classNames from "classnames";
-
 import { SliderProps } from "../../shared/types/Props";
 
 export const Slider = (props: SliderProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
   const { children, width, height, margin } = props;
 
   const { current, loopedList, firstIndex, lastIndex, changeCurrent } =
@@ -18,11 +18,12 @@ export const Slider = (props: SliderProps) => {
 
   const disableTransition = current < firstIndex || current > lastIndex;
 
-  const initialTranslate = width * 0.6;
+  const containerWidth = containerRef.current?.clientWidth || width;
+  const initialTranslate = (containerWidth - width) * 0.85;
   const translateValue = -(width + margin) * current;
 
   return (
-    <div className={styles.sliderContainer} style={{ maxWidth: width * 2 }}>
+    <div ref={containerRef} className={styles.sliderContainer} style={{ maxWidth: width * 2 }}>
       <div className={styles.slider}>
         <div
           style={{

@@ -27,14 +27,27 @@ const frequentQuestions = [
 ];
 
 const Home: NextPage = () => {
+  const getImage = (url: string) => {
+    return (
+      <Image
+        src={url}
+        alt=""
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+      />
+    );
+  };
+
   return (
     <Layout page="home">
       <Slider width={914} height={635} margin={32}>
-        <Image src="/image/optica_0.jpeg" alt="" layout="fill" />
-        <Image src="/image/optica_1.jpeg" alt="" layout="fill" />
-        <Image src="/image/optica_2.jpeg" alt="" layout="fill" />
-        <Image src="/image/optica_3.jpeg" alt="" layout="fill" />
-        <Image src="/image/optica_3.jpeg" alt="" layout="fill" />
+        {getImage("/image/optica_0.jpeg")}
+        {getImage("/image/optica_1.jpeg")}
+        {getImage("/image/optica_2.jpeg")}
+        {getImage("/image/optica_0.jpeg")}
+        {getImage("/image/optica_1.jpeg")}
+        {getImage("/image/optica_2.jpeg")}
       </Slider>
 
       <OpticsServices />
