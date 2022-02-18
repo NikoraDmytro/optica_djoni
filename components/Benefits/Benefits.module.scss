@@ -1,0 +1,42 @@
+@use "../../shared/styles/components";
+@use "../../shared/styles/variables";
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+  margin-bottom: 1.25em;
+}
+
+.benefitsList {
+  gap: 39px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+}
+
+.benefitBlock {
+  padding: 30px;
+  max-width: 374px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.benefitName {
+  margin: 0;
+  font-size: 18px;
+  margin-top: 1em;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+.benefitDescription {
+  margin: 0;
+  font-size: 16px;
+  margin-top: 18px;
+  line-height: 1.5em;
+  color: variables.$secondary;
+}

@@ -1,1 +1,0 @@
-export { OpticsBenefits } from "./OpticsBenefits";

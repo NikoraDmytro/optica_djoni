@@ -1,9 +1,16 @@
-import { FrequentQuestion } from "../components/FrequentQuestions";
 import { Layout } from "../components/Layout";
-import { PageIntroduction } from "../components/PageIntroduction";
+import { Benefits } from "../components/Benefits";
 import { UserComments } from "../components/UserComments";
+import { PageIntroduction } from "../components/PageIntroduction";
+import { FrequentQuestion } from "../components/FrequentQuestions";
+
+import { NightEyeGlassDescription } from "../domain/NightEyeGlassDescription/NightEyeGlassDescription";
 
 import eyeGlassIcon from "../public/icons/eyeglass.svg";
+
+import card from "../public/icons/card.svg";
+import cycle from "../public/icons/cycle.svg";
+import doctorIcon from "../public/icons/doctor.svg";
 
 const frequentQuestions = [
   {
@@ -36,6 +43,32 @@ function NightEyeglass() {
           "Преимущество",
           "Характеристики",
           "Кому подходит",
+        ]}
+      />
+
+      <NightEyeGlassDescription />
+
+      <Benefits
+        blockTitle="ПРЕИМУЩЕСТВА"
+        benefits={[
+          {
+            icon: doctorIcon,
+            name: "Плазменная обработка поверхности",
+            description: `Все ортокератологические линзы проходят плазменную обработку поверхности, 
+            обеспечивающую повышенный комфорт для пациентов за счёт повышения гидрофильности линзы.`,
+          },
+          {
+            icon: card,
+            name: "Индивидуальное проектирование",
+            description: `Возможно изготовление абсолютно любой линзы с индивидуально рассчитанными параметрами глаза пациента. 
+            Идеальное решение при высоких степенях нарушения рефракций.`,
+          },
+          {
+            icon: cycle,
+            name: "Замедление прогрессирования миопии",
+            description: `У детей и подростков. Ночные линзы включены в 
+            "Федеральные клинические рекомендации по диагностике и лечению близорукости у детей".`,
+          },
         ]}
       />
 

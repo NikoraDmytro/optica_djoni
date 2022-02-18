@@ -1,13 +1,17 @@
 import { Layout } from "../components/Layout";
 import { FrequentQuestion } from "../components/FrequentQuestions";
 
-import { PageIntroduction } from "../components/PageIntroduction";
+import { Benefits } from "../components/Benefits";
 import { UserComments } from "../components/UserComments";
+import { PageIntroduction } from "../components/PageIntroduction";
 
-import { OpticsBenefits } from "../domain/OpticsBenefits";
 import { OpticsPartners } from "../domain/OpticsPartners";
 
 import glassesIcon from "../public/icons/glasses.svg";
+
+import card from "../public/icons/card.svg";
+import cycle from "../public/icons/cycle.svg";
+import doctorIcon from "../public/icons/doctor.svg";
 
 const frequentQuestions = [
   {
@@ -60,7 +64,22 @@ function Optics() {
         ]}
       />
 
-      <OpticsBenefits />
+      <Benefits
+        benefits={[
+          {
+            icon: doctorIcon,
+            name: "Cотрудники с медицинским образованием помогут вам в любых вопросах.",
+          },
+          {
+            icon: card,
+            name: "Работает программа лояльности для постоянных клиентов.",
+          },
+          {
+            icon: cycle,
+            name: "Постоянное обновление ассортимента",
+          },
+        ]}
+      />
 
       <OpticsPartners />
 

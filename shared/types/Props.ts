@@ -8,6 +8,12 @@ export type PageName =
   | "adult_ophthalmology"
   | "workshop";
 
+export type Benefit = {
+  icon: StaticImageData;
+  name: string;
+  description?: string; 
+}
+
 export type LayoutProps = {
   page: PageName;
   children: ReactNode;
@@ -32,3 +38,8 @@ export type SliderProps = {
   children: ReactNode[];
   sideContent?: ReactNode;
 };
+
+export type BenefitsProps = {
+  blockTitle?: string;
+  benefits: Benefit[];
+}
