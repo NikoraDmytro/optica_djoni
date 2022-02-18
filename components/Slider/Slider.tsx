@@ -1,61 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import { Switchers } from "./components/Switchers";
 
 import styles from "./Slider.module.scss";
 
-import { SliderProps } from "../../shared/types/Props";
+import { useCarousel } from "./utils/useCarousel";
+
 import classNames from "classnames";
 
+import { SliderProps } from "../../shared/types/Props";
+
 export const Slider = (props: SliderProps) => {
-  const [current, setCurrent] = useState(2);
   const { children, width, height, margin } = props;
 
-  const length = children.length;
-  const sliderContent = [
-    children[length - 2],
-    children[length - 1],
-    ...children,
-    children[0],
-  ];
-  const lastIndex = sliderContent.length - 2;
+  const { current, loopedList, firstIndex, lastIndex, changeCurrent } =
+    useCarousel(children);
+
+  const disableTransition = current < firstIndex || current > lastIndex;
 
   const initialTranslate = width * 0.6;
   const translateValue = -(width + margin) * current;
 
-  useEffect(() => {
-    const onStart = () => {
-      setCurrent(1);
-      
-      setTimeout(() => {
-        setCurrent(2);
-      });
-    };
-
-    const next = () => {
-      setCurrent(current + 1);
-    };
-
-    const timeout = setTimeout(() => {
-      current === lastIndex ? onStart() : next();
-    }, 3000);
-
-    return () => clearTimeout(timeout);
-  }, [current, lastIndex]);
-
   return (
-    <div className={styles.sliderContainer}>
-      <div className={styles.slider} style={{ maxWidth: width * 2 }}>
+    <div className={styles.sliderContainer} style={{ maxWidth: width * 2 }}>
+      <div className={styles.slider}>
         <div
           style={{
             transform: `translateX(${translateValue + initialTranslate}px)`,
           }}
           className={classNames({
             [styles.sliderContent]: true,
-            [styles.noTransition]: current === 1,
+            [styles.noTransition]: disableTransition,
           })}
         >
-          {sliderContent.map((item, index) => (
+          {loopedList.map((item, index) => (
             <div
               key={index}
               style={{ width: width, height: height, marginRight: margin }}
@@ -71,10 +49,10 @@ export const Slider = (props: SliderProps) => {
       </div>
 
       <Switchers
-        current={current}
         width={width}
+        current={current}
         initialTranslate={initialTranslate}
-        changeCurrent={(index) => setCurrent(index)}
+        changeCurrent={changeCurrent}
       />
     </div>
   );

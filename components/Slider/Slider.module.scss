@@ -1,5 +1,6 @@
 .sliderContainer {
   width: 100%;
+  margin: auto;
   margin-bottom: 8.375em;
 }
 
@@ -11,7 +12,7 @@
 .sliderContent {
   display: flex;
   flex-direction: row;
-  transition: all 0.5s ease;
+  transition: all 1s ease;
   &.noTransition {
     transition: none;
   }
@@ -21,6 +22,7 @@
   opacity: 0.2;
   flex-shrink: 0;
   position: relative;
+  transition: opacity 1s ease;
 }
 
 .sliderItem.current {

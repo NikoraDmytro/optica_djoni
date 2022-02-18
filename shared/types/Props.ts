@@ -23,11 +23,12 @@ export type PageIntroductionProps = {
   pageIcon: StaticImageData;
   backgroundImageUrl: string;
   navigationLinks: string[];
-}
+};
 
 export type SliderProps = {
   width: number;
   height: number;
   margin: number;
   children: ReactNode[];
-}
+  sideContent?: ReactNode;
+};
