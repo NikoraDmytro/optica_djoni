@@ -49,10 +49,14 @@ export const Slider = (props: SliderProps) => {
       </div>
 
       <Switchers
-        width={width}
         current={current}
-        initialTranslate={initialTranslate}
+        lastIndex={lastIndex}
+        firstIndex={firstIndex}
         changeCurrent={changeCurrent}
+        style={{
+          width: width,
+          transform: `translateX(${initialTranslate}px)`,
+        }}
       />
     </div>
   );

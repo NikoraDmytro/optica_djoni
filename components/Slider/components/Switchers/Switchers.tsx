@@ -1,16 +1,19 @@
 import classNames from "classnames";
+import { CSSProperties, ReactNode } from "react";
 
 import styles from "./Switchers.module.scss";
 
 interface Props {
-  width: number;
   current: number;
-  initialTranslate: number;
+  lastIndex: number;
+  firstIndex: number;
+  style: CSSProperties;
   changeCurrent: (index: number) => void;
 }
 
 export const Switchers = (props: Props) => {
-  const { current, width, initialTranslate, changeCurrent } = props;
+  const { current, changeCurrent, firstIndex, lastIndex } = props;
+  const switchers: ReactNode[] = [];
 
   const renderSwitcher = (index: number) => {
     const handleClick = () => {
@@ -31,16 +34,13 @@ export const Switchers = (props: Props) => {
     );
   };
 
+  for (let i = firstIndex; i <= lastIndex; i++) {
+    switchers.push(renderSwitcher(i));
+  }
+
   return (
-    <ul
-      className={styles.switchersList}
-      style={{ width: width, transform: `translateX(${initialTranslate}px)` }}
-    >
-      {renderSwitcher(2)}
-      {renderSwitcher(3)}
-      {renderSwitcher(4)}
-      {renderSwitcher(5)}
-      {renderSwitcher(6)}
+    <ul className={styles.switchersList} style={props.style}>
+      {switchers}
     </ul>
   );
 };
