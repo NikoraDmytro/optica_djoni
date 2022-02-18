@@ -20,6 +20,8 @@ import Zeiss from "./icons/zeiss.png";
 import Essilor from "./icons/essilor.png";
 import Rodenstock from "./icons/rodenstock.png";
 
+import styles from "./OpticsPartners.module.scss";
+
 export const OpticsPartners = () => {
   const getImage = (url: string) => {
     return (
@@ -63,9 +65,19 @@ export const OpticsPartners = () => {
       </Slider>
 
       <PartnersBlock
-        text="Работаем со всеми поставщиками линз для очков, которые представлены в Украине: Hoya, Tokai, Zeiss, Essilor, Rodenstock, Rupp & Hubrach, Divel, Le Perle и другие."
+        text="Работаем со всеми поставщиками линз для очков, которые представлены в Украине: Hoya, Tokai, Zeiss, Essilor, Rodenstock, Rupp & Hubrach, Divel, Le Perle и другие."
         icons={[Hoya, Tokai, Zeiss, Essilor, Rodenstock]}
       />
+
+      <div className={styles.opticsVideo}>
+        <Image
+          src="/image/optics_video.png"
+          alt=""
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+        />
+      </div>
     </>
   );
 };
