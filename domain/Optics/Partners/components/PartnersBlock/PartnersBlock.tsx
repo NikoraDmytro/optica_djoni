@@ -3,7 +3,7 @@ import classNames from "classnames";
 
 import styles from "./PartnersBlock.module.scss";
 
-import { getImageName } from "../../../../utils/getImageName";
+import { getImageName } from "../../../../../utils/getImageName";
 
 interface Props {
   text: string;

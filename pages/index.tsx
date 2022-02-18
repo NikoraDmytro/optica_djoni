@@ -3,28 +3,12 @@ import type { NextPage } from "next";
 
 import { Layout } from "../components/Layout";
 
-import { OpticsStuff } from "../domain/OpticsStuff";
-import { OpticsServices } from "../domain/OpticsServices";
+import { OpticsStuff } from "../domain/Landing/OpticsStuff";
+import { OpticsServices } from "../domain/Landing/OpticsServices";
+import { LandingPageFrequentQuestions } from "../domain/Landing/FrequentQuestions";
 
 import { Slider } from "../components/Slider";
-import { FrequentQuestion } from "../components/FrequentQuestions";
 import { UserComments } from "../components/UserComments/UserComments";
-
-const frequentQuestions = [
-  {
-    text: "Как часто нужно проверять зрение?",
-    answer: `Проверка зрения у здорового человека должна проводиться раз в год в профилактических целях.
-    У детей и у людей, имеющих заболевания глаз – в сроки, указанные врачом-офтальмологом.`,
-  },
-  {
-    text: "Зачем проверять зрение?",
-    answer: "За шкафом!",
-  },
-  {
-    text: "Ухудшает ли зрение ношение очков?",
-    answer: "Нет, блин, улучшает!",
-  },
-];
 
 const Home: NextPage = () => {
   const getImage = (url: string) => {
@@ -56,7 +40,7 @@ const Home: NextPage = () => {
 
       <UserComments />
 
-      <FrequentQuestion questions={frequentQuestions} />
+      <LandingPageFrequentQuestions />
     </Layout>
   );
 };

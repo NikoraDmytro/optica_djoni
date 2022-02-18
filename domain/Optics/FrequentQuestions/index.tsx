@@ -1,0 +1,1 @@
+export { OpticsFrequentQuestions } from "./FrequentQuestions";

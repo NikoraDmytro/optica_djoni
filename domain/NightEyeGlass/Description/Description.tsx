@@ -1,7 +1,7 @@
 import Image from "next/image";
 import classNames from "classnames";
 
-import styles from "./NightEyeGlassDescription.module.scss";
+import styles from "./Description.module.scss";
 
 export const NightEyeGlassDescription = () => {
   return (

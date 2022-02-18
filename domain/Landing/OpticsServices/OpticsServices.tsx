@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getImageName } from "../../utils/getImageName";
+import { getImageName } from "../../../utils/getImageName";
 
 import services from "./services.json";
 

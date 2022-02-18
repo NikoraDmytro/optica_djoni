@@ -1,0 +1,1 @@
+export { LandingPageFrequentQuestions } from "./FrequentQuestions";

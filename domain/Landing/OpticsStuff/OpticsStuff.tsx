@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { getImageName } from "../../utils/getImageName";
+import { getImageName } from "../../../utils/getImageName";
 
 import stuff from "./stuff.json";
 

@@ -1,32 +1,12 @@
 import { Layout } from "../components/Layout";
-import { Benefits } from "../components/Benefits";
 import { UserComments } from "../components/UserComments";
 import { PageIntroduction } from "../components/PageIntroduction";
-import { FrequentQuestion } from "../components/FrequentQuestions";
 
-import { NightEyeGlassDescription } from "../domain/NightEyeGlassDescription/NightEyeGlassDescription";
+import { NightEyeGlassBenefits } from "../domain/NightEyeGlass/Benefits";
+import { NightEyeGlassDescription } from "../domain/NightEyeGlass/Description/Description";
 
 import eyeGlassIcon from "../public/icons/eyeglass.svg";
-
-import card from "../public/icons/card.svg";
-import cycle from "../public/icons/cycle.svg";
-import doctorIcon from "../public/icons/doctor.svg";
-
-const frequentQuestions = [
-  {
-    text: "Как часто нужно проверять зрение??",
-    answer: `Проверка зрения у здорового человека должна проводиться раз в год в профилактических целях.
-    У детей и у людей, имеющих заболевания глаз – в сроки, указанные врачом-офтальмологом.`,
-  },
-  {
-    text: "Зачем проверять зрение?",
-    answer: "Чтобы меньше врезаться в столбы!",
-  },
-  {
-    text: "Ухудшает ли зрение ношение очков?",
-    answer: "Нет, блин, улучшает!",
-  },
-];
+import { NightEyeGlassFrequentQuestions } from "../domain/NightEyeGlass/FrequentQuestions";
 
 function NightEyeglass() {
   const backgroundImageUrl =
@@ -48,33 +28,11 @@ function NightEyeglass() {
 
       <NightEyeGlassDescription />
 
-      <Benefits
-        blockTitle="ПРЕИМУЩЕСТВА"
-        benefits={[
-          {
-            icon: doctorIcon,
-            name: "Плазменная обработка поверхности",
-            description: `Все ортокератологические линзы проходят плазменную обработку поверхности, 
-            обеспечивающую повышенный комфорт для пациентов за счёт повышения гидрофильности линзы.`,
-          },
-          {
-            icon: card,
-            name: "Индивидуальное проектирование",
-            description: `Возможно изготовление абсолютно любой линзы с индивидуально рассчитанными параметрами глаза пациента. 
-            Идеальное решение при высоких степенях нарушения рефракций.`,
-          },
-          {
-            icon: cycle,
-            name: "Замедление прогрессирования миопии",
-            description: `У детей и подростков. Ночные линзы включены в 
-            "Федеральные клинические рекомендации по диагностике и лечению близорукости у детей".`,
-          },
-        ]}
-      />
+      <NightEyeGlassBenefits />
 
       <UserComments />
 
-      <FrequentQuestion questions={frequentQuestions} />
+      <NightEyeGlassFrequentQuestions />
     </Layout>
   );
 }

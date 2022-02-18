@@ -1,4 +1,4 @@
-@use "../../../../shared/styles/base";
+@use "../../../../../shared/styles/base";
 
 .partnersBlockContainer {
   @include base.flexCenter(column);

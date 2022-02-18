@@ -1,51 +1,13 @@
 import { Layout } from "../components/Layout";
-import { FrequentQuestion } from "../components/FrequentQuestions";
 
-import { Benefits } from "../components/Benefits";
 import { UserComments } from "../components/UserComments";
 import { PageIntroduction } from "../components/PageIntroduction";
 
-import { OpticsPartners } from "../domain/OpticsPartners";
+import { OpticsPartners } from "../domain/Optics/Partners";
+import { OpticsBenefits } from "../domain/Optics/Benefits";
+import { OpticsFrequentQuestions } from "../domain/Optics/FrequentQuestions";
 
 import glassesIcon from "../public/icons/glasses.svg";
-
-import card from "../public/icons/card.svg";
-import cycle from "../public/icons/cycle.svg";
-import doctorIcon from "../public/icons/doctor.svg";
-
-const frequentQuestions = [
-  {
-    text: "Чем отличаются линзы находящиеся на складе в Украине от линз , которые делают на заказ 3-4 недели?",
-    answer: `Линзы, которые находятся на складах в Украине, это линзы стандартных параметров, подходящие в большинстве случаев нашим потребителям.
-    Линзы, которые делаются на заказ(3-4 недели) — это линзы с вашими индивидуальными параметрами.
-    Привыкание к таким линзам намного легче и в ряде случаев просто необходимы именно эти линзы, т.к параметры рецепта и анатомические параметры могут не вписываться в стандарты.`,
-  },
-  {
-    text: "Возврат мягких контактных линз, аксессуаров к ним, растворов и увлажняющих капель.",
-    answer: "Возврату не подлежит!",
-  },
-  {
-    text: "Возврат солнцезащитных очков.",
-    answer: "ВОЗВРАТУ НЕ ПОДЛЕЖИТ!!! ",
-  },
-  {
-    text: "Возврат оправы.",
-    answer: "Шиш тебе а не возврат!",
-  },
-  {
-    text: "Можно ли поставить новые линзы в старую оправу?",
-    answer: "Нет нельзя!",
-  },
-  {
-    text: "У меня хорошее зрение и я хочу купить цветные контактные линзы. Надо ли мне проходить диагностику зрения у врача?",
-    answer:
-      "Конечно надо, мы никогда не упустим возможность зароботать пару лишних шекелей!",
-  },
-  {
-    text: "Почему нельзя перенашивать контактные линзы?",
-    answer: "Потому что мы потеряем доход, а вы - зрение!",
-  },
-];
 
 function Optics() {
   const backgroundImageUrl =
@@ -64,28 +26,13 @@ function Optics() {
         ]}
       />
 
-      <Benefits
-        benefits={[
-          {
-            icon: doctorIcon,
-            name: "Cотрудники с медицинским образованием помогут вам в любых вопросах.",
-          },
-          {
-            icon: card,
-            name: "Работает программа лояльности для постоянных клиентов.",
-          },
-          {
-            icon: cycle,
-            name: "Постоянное обновление ассортимента",
-          },
-        ]}
-      />
+      <OpticsBenefits />
 
       <OpticsPartners />
 
       <UserComments />
 
-      <FrequentQuestion questions={frequentQuestions} />
+      <OpticsFrequentQuestions />
     </Layout>
   );
 }

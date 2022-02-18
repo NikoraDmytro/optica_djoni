@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Slider } from "../../components/Slider";
+import { Slider } from "../../../components/Slider";
 import { PartnersBlock } from "./components/PartnersBlock";
 
 import RayBan from "./icons/ray_ban.png";
@@ -20,7 +20,7 @@ import Zeiss from "./icons/zeiss.png";
 import Essilor from "./icons/essilor.png";
 import Rodenstock from "./icons/rodenstock.png";
 
-import styles from "./OpticsPartners.module.scss";
+import styles from "./Partners.module.scss";
 
 export const OpticsPartners = () => {
   const getImage = (url: string) => {
