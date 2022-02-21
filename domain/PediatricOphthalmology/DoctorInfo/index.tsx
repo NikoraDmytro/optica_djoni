@@ -1,0 +1,1 @@
+export { PediatricOphthalmologyDoctorInfo } from "./DoctorInfo";

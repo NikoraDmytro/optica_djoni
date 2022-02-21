@@ -9,6 +9,7 @@ import {
   PediatricOphthalmologyServices,
 } from "../domain/PediatricOphthalmology/Services";
 import { PediatricOphthalmologySlider } from "../domain/PediatricOphthalmology/Slider";
+import { PediatricOphthalmologyDoctorInfo } from "../domain/PediatricOphthalmology/DoctorInfo";
 import { PediatricOphthalmologySpecialDevices } from "../domain/PediatricOphthalmology/Devices";
 import { PediatricOphthalmologyFrequentQuestions } from "../domain/PediatricOphthalmology/FrequentQuestions";
 
@@ -32,6 +33,8 @@ function PediatricOphthalmology() {
       <PediatricOphthalmologySlider />
 
       <PediatricOphthalmologySpecialDevices />
+
+      <PediatricOphthalmologyDoctorInfo />
 
       <UserComments />
 
