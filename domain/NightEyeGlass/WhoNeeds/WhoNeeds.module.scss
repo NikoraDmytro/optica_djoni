@@ -1,0 +1,23 @@
+@use "../../../shared/styles/base";
+@use "../../../shared/styles/components";
+
+.personsList {
+  @include base.resetList();
+}
+
+.personsListItem {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 2.5em;
+}
+
+.ticIcon {
+  margin-right: 1em;
+}
+
+.personDescription {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.5em;
+}

@@ -3,10 +3,12 @@ import { UserComments } from "../components/UserComments";
 import { PageIntroduction } from "../components/PageIntroduction";
 
 import { NightEyeGlassBenefits } from "../domain/NightEyeGlass/Benefits";
+import { WhoNeedsNightEyeglass } from "../domain/NightEyeGlass/WhoNeeds";
+import { NightEyeGlassCharacteristics } from "../domain/NightEyeGlass/Characteristics";
 import { NightEyeGlassDescription } from "../domain/NightEyeGlass/Description/Description";
+import { NightEyeGlassFrequentQuestions } from "../domain/NightEyeGlass/FrequentQuestions";
 
 import eyeGlassIcon from "../public/icons/eyeglass.svg";
-import { NightEyeGlassFrequentQuestions } from "../domain/NightEyeGlass/FrequentQuestions";
 
 function NightEyeglass() {
   const backgroundImageUrl =
@@ -29,6 +31,10 @@ function NightEyeglass() {
       <NightEyeGlassDescription />
 
       <NightEyeGlassBenefits />
+
+      <NightEyeGlassCharacteristics />
+
+      <WhoNeedsNightEyeglass />
 
       <UserComments />
 
