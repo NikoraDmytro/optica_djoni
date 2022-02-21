@@ -1,4 +1,4 @@
-import { FrequentQuestion } from "../../../components/FrequentQuestions";
+import { FrequentQuestions } from "../../../components/FrequentQuestions";
 
 const frequentQuestions = [
   {
@@ -15,5 +15,5 @@ const frequentQuestions = [
 ];
 
 export const AdultOphthalmologyFrequentQuestions = () => {
-  return <FrequentQuestion questions={frequentQuestions} />;
+  return <FrequentQuestions questions={frequentQuestions} />;
 };

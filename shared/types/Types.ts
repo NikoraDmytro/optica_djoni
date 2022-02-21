@@ -16,3 +16,8 @@ export type Service = {
   name: string;
   clarification?: string;
 };
+
+export type Question = {
+  text: string;
+  answer: string;
+};

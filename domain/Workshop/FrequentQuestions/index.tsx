@@ -1,0 +1,1 @@
+export { WorkshopFrequentQuestions } from "./FrequentQuestions";

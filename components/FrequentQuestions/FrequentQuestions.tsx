@@ -1,18 +1,12 @@
-import classNames from "classnames";
 import { useState } from "react";
+import classNames from "classnames";
+
+import { Question } from "../../shared/types/Types";
+import { FrequentQuestionProps } from "../../shared/types/Props";
 
 import styles from "./FrequentQuestion.module.scss";
 
-type Question = {
-  text: string;
-  answer: string;
-};
-
-interface Props {
-  questions: Question[];
-}
-
-const Question = ({ question }: { question: Question }) => {
+const FrequentQuestion = ({ question }: { question: Question }) => {
   const [opened, setOpened] = useState(false);
 
   const className = classNames({
@@ -41,13 +35,13 @@ const Question = ({ question }: { question: Question }) => {
   );
 };
 
-export const FrequentQuestion = ({ questions }: Props) => {
+export const FrequentQuestions = ({ questions }: FrequentQuestionProps) => {
   return (
     <div className={styles.container_white}>
       <h1 className={styles.largeTitle}>Часто задаваемые вопросы</h1>
 
       {questions.map((question) => (
-        <Question key={question.text} question={question} />
+        <FrequentQuestion key={question.text} question={question} />
       ))}
     </div>
   );

@@ -11,6 +11,7 @@
   h2 {
     margin: 0;
     font-weight: 600;
+    margin-right: 1em;
   }
   &.opened {
     background-color: white;
@@ -30,6 +31,7 @@
 
 .showAnswerButton {
   @include base.arrowButton(10px, #232323, -45deg, 2px);
+  flex-shrink: 0;
   transition-duration: 0.25s;
   &.active {
     transform: rotate(135deg);

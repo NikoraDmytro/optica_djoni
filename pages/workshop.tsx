@@ -1,22 +1,11 @@
-import { FrequentQuestion } from "../components/FrequentQuestions";
 import { Layout } from "../components/Layout";
-import { PageIntroduction } from "../components/PageIntroduction";
 import { UserComments } from "../components/UserComments";
+import { PageIntroduction } from "../components/PageIntroduction";
+
+import { WorkShopServices } from "../domain/Workshop/WorkshopServices";
+import { WorkshopFrequentQuestions } from "./../domain/Workshop/FrequentQuestions/FrequentQuestions";
 
 import workshopIcon from "../public/icons/workshop.svg";
-
-const frequentQuestions = [
-  {
-    text: "Можно ли заказать в вашей мастерской изготовление очков с прогрессивными или офисными линзами??",
-    answer: `Наша мастерская занимается изготовлением очков любой сложности, в том числе прогрессивных, офисных, бифокальных, астигматических и т.д.
-    Все очки производятся в строгом соответствии с рецептом офтальмолога с учетом пожеланий заказчика. 
-    Изготовление очков производится с применением высокоточного компьютерного оборудования.`,
-  },
-  {
-    text: "Что делать, если изготовленные по рецепту очки мне не подошли или не понравились?",
-    answer: "Купить новые, или не ныть!",
-  },
-];
 
 function Workshop() {
   const backgroundImageUrl =
@@ -31,7 +20,9 @@ function Workshop() {
         navigationLinks={["Наши услуги"]}
       />
 
-      <FrequentQuestion questions={frequentQuestions} />
+      <WorkShopServices />
+
+      <WorkshopFrequentQuestions />
 
       <UserComments />
     </Layout>

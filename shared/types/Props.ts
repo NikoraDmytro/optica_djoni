@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Benefit, PageName, Service } from "./Types";
+import { Benefit, PageName, Question, Service } from "./Types";
 
 export type LayoutProps = {
   page: PageName;
@@ -29,11 +29,15 @@ export type SliderProps = {
 export type BenefitsProps = {
   blockTitle?: string;
   benefits: Benefit[];
-}
+};
 
 export type ListOfServicesProps = {
   title: string;
   margin: number;
   subTitle?: string;
   services: Service[];
-}
+};
+
+export type FrequentQuestionProps = {
+  questions: Question[];
+};

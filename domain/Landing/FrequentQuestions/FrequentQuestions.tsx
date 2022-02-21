@@ -1,4 +1,4 @@
-import { FrequentQuestion } from "../../../components/FrequentQuestions";
+import { FrequentQuestions } from "../../../components/FrequentQuestions";
 
 const frequentQuestions = [
   {
@@ -17,5 +17,5 @@ const frequentQuestions = [
 ];
 
 export const LandingPageFrequentQuestions = () => (
-  <FrequentQuestion questions={frequentQuestions} />
+  <FrequentQuestions questions={frequentQuestions} />
 );

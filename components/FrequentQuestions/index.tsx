@@ -1,1 +1,1 @@
-export { FrequentQuestion } from "./FrequentQuestions";
+export { FrequentQuestions } from "./FrequentQuestions";
