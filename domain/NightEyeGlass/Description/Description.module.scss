@@ -9,11 +9,8 @@
 }
 
 .title {
-  margin: 0;
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 48px;
-  margin-bottom: 0.6em;
+  @extend .largeTitle;
+  margin-bottom: 0.5em;
 }
 
 .text {

@@ -1,42 +1,34 @@
 @use "../../shared/styles/base";
 @use "../../shared/styles/variables";
+@use "../../shared/styles/components";
 
-.wrapper {
+.container {
   @include base.flexCenter();
   width: 100vw;
   height: 40em;
-  max-width: 100%;
-  margin-left: 50%;
   margin-bottom: 5em;
   background-size: cover;
-  transform: translateX(-50%);
   background-position: center;
 }
 
-.pageIntroductionContainer {
+.pageIntroduction {
   width: 75%;
   padding: 2em;
   display: flex;
   flex-direction: row;
   background-color: rgba(255, 255, 255, 0.7);
-  span {
-    margin-right: 2em !important;
+  .icon {
+    margin-right: 2em;
+  }
+  h1 {
+    margin-bottom: 0.5em;
   }
 }
 
-.title {
-  margin: 0;
-  font-size: 48px;
-  font-family: 700;
-  margin-bottom: 0.5em;
-}
-
 .navigationLinks {
-  margin: 0;
-  padding: 0;
+  @include base.resetList();
   display: flex;
   flex-direction: row;
-  list-style-type: none;
 }
 
 .navigationLink {

@@ -1,4 +1,5 @@
 @use "../../../../../shared/styles/base";
+@use "../../../../../shared/styles/components";
 
 .partnersBlockContainer {
   @include base.flexCenter(column);
@@ -10,28 +11,19 @@
     max-width: 1200px;
   }
   p {
-    margin: 0;
-    font-size: 24px;
     font-weight: 500;
     line-height: 1.5em;
-    margin-bottom: 47px;
-    &.small {
-      font-size: 16px;
-    }
   }
 }
 
-.title {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
-  margin-bottom: 1.25em;
+.small {
+  font-size: 16px;
 }
 
 .partnersBrandIcons {
   width: 100%;
   display: flex;
+  margin-top: 47px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;

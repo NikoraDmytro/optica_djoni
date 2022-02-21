@@ -1,29 +1,15 @@
-@use "./../../shared/styles/variables";
-
-.frequentQuestionsContainer {
-  margin: auto;
-  max-width: 1400px;
-  padding: 5em 6.5em;
-  margin-bottom: 5em;
-  background-color: white;
-}
-
-.title {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 40px;
-}
+@use "../../shared/styles/base";
+@use "../../shared/styles/variables";
+@use "../../shared/styles/components";
 
 .questionBlock {
   padding: 1em;
   cursor: pointer;
+  padding-right: 1.5em;
   margin-bottom: 1.5em;
-  background-color: #e7f4f2;
+  background-color: variables.$lightGreen;
   h2 {
-    flex: 1;
     margin: 0;
-    font-size: 24px;
     font-weight: 600;
   }
   &.opened {
@@ -43,20 +29,10 @@
 }
 
 .showAnswerButton {
-  $color: #232323;
-  padding: 0;
-  width: 12px;
-  height: 12px;
-  border: none;
-  border-radius: 2px;
-  margin-right: 0.75em;
-  transform: rotate(45deg);
+  @include base.arrowButton(10px, #232323, -45deg, 2px);
   transition-duration: 0.25s;
-  border-top: 2px solid $color;
-  background-color: transparent;
-  border-left: 2px solid $color;
   &.active {
-    transform: rotate(-135deg);
+    transform: rotate(135deg);
   }
 }
 

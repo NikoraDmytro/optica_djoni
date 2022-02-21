@@ -4,3 +4,36 @@
   justify-content: center;
   flex-direction: $direction;
 }
+
+@mixin arrowButton($size, $color, $rotate, $thickness: 1px) {
+  @include resetButton();
+  $border: $thickness solid $color;
+  width: $size;
+  height: $size;
+  border-radius: 2px;
+  border-left: $border;
+  border-bottom: $border;
+  background: transparent;
+  transform: rotate($rotate);
+}
+
+@mixin resetButton() {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin resetInput {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+@mixin resetList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

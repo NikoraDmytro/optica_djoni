@@ -1,36 +1,31 @@
 @use "../../../../shared/styles/base";
 @use "../../../../shared/styles/variables";
+@use "../../../../shared/styles/components";
 
 .AskQuestionContainer {
-    width: 100%;
-    margin: auto;
-    display: flex;
-    margin-top: 5em;
-    height: 30.125em;
-    max-width: 1400px;
-    flex-direction: row;
-    > div {
-        @include base.flexCenter();
-        flex-basis: 50%;
-    }
-    .left {
-        background-color: white;
-    }
-    .right {
-        background-color: #7DCDD4;
-    }
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  height: 30.125em;
+  flex-direction: row;
+  > div {
+    @include base.flexCenter();
+    flex-basis: 50%;
+  }
 }
 
 .AskQuestionInfo {
-    width: 30.5em;
-    text-align: start;
-    h1 {
-        margin: 0.5em 0;
-        font-size: 3em;
-        color: variables.$darkBlue;
-    }
-    p {
-        font-size: 1.5em;
-        margin: 0;
-    }
+  max-width: 30.5em;
+  h1 {
+    margin: 0.5em 0;
+    color: variables.$darkBlue;
+  }
+  p {
+    margin: 0;
+    font-weight: 400;
+  }
+}
+
+.formWrapper {
+  background-color: variables.$lightBlue;
 }

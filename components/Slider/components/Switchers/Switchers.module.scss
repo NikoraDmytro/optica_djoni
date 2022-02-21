@@ -1,9 +1,10 @@
+@use "../../../../shared/styles/base";
+
 .switchersList {
-  padding: 0;
+  @include base.resetList();
   display: flex;
   margin-top: 1em;
   flex-direction: row;
-  list-style-type: none;
   justify-content: center;
 }
 
@@ -13,7 +14,6 @@
   cursor: pointer;
   margin-right: 1em;
   border-radius: 50%;
-  display: inline-block;
   transition: all 0.5s ease;
   background-color: #e0e0e0;
 }

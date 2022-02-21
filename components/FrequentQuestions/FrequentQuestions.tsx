@@ -30,12 +30,12 @@ const Question = ({ question }: { question: Question }) => {
   };
 
   return (
-    <div className={className} onClick={handleClick} >
+    <div className={className} onClick={handleClick}>
       <div className={styles.questionBlockHeader}>
-        <h2>{question.text}</h2>
+        <h2 className={styles.subTitle}>{question.text}</h2>
         <button className={buttonClassName} />
       </div>
-      
+
       {opened ? <p className={styles.answer}>{question.answer}</p> : null}
     </div>
   );
@@ -43,8 +43,8 @@ const Question = ({ question }: { question: Question }) => {
 
 export const FrequentQuestion = ({ questions }: Props) => {
   return (
-    <div className={styles.frequentQuestionsContainer}>
-      <h1 className={styles.title}>Часто задаваемые вопросы</h1>
+    <div className={styles.container_white}>
+      <h1 className={styles.largeTitle}>Часто задаваемые вопросы</h1>
 
       {questions.map((question) => (
         <Question key={question.text} question={question} />

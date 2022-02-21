@@ -14,9 +14,16 @@ interface Props {
 export const PartnersBlock = ({ title, text, icons }: Props) => {
   return (
     <div className={styles.partnersBlockContainer}>
-      <h1 className={styles.title}>{title || null}</h1>
+      {title && <h1 className={styles.title}>{title}</h1>}
 
-      <p className={classNames({ [styles.small]: title })}>{text}</p>
+      <p
+        className={classNames({
+          [styles.subTitle]: true,
+          [styles.small]: title,
+        })}
+      >
+        {text}
+      </p>
 
       <div className={styles.partnersBrandIcons}>
         {icons.map((icon) => {

@@ -1,35 +1,27 @@
 @use "../../../shared/styles/variables";
+@use "../../../shared/styles/components";
 
-.servicesContainer {
+.wrapper {
   margin: auto;
   display: flex;
   gap: 2em 2.5em;
-  max-width: 1400px;
-  padding: 5em 6.5em;
   flex-flow: row wrap;
-  margin-bottom: 6.5em;
-  background-color: variables.$lightBlue-background;
 }
 
 .introductoryText {
   width: 48.5em;
-  h1 {
-    margin: 0;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 1em;
-  }
   p {
-    width: 90%;
+    width: 95%;
     font-weight: 500;
+    line-height: 1.5em;
     margin-top: 1.125em;
   }
 }
 
 .serviceBlock {
+  width: 23em;
   display: flex;
   height: 308px;
-  width: 23em;
   padding: 1.875em;
   flex-direction: column;
   background-color: white;

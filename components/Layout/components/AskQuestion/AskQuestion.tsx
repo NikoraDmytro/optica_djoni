@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Image from "next/image";
 
 import styles from "./AskQuestion.module.scss";
@@ -5,9 +6,14 @@ import styles from "./AskQuestion.module.scss";
 import { QuestionForm } from "./components/QuestionForm";
 
 export const AskQuestion = () => {
+  const containerClassName = classNames(
+    [styles.AskQuestionContainer],
+    [styles.container_white]
+  );
+
   return (
-    <div className={styles.AskQuestionContainer}>
-      <div className={styles.left}>
+    <div className={containerClassName}>
+      <div>
         <div className={styles.AskQuestionInfo}>
           <Image
             src="/icons/eye.svg"
@@ -17,13 +23,16 @@ export const AskQuestion = () => {
             layout="fixed"
           />
 
-          <h1>Есть вопросы?</h1>
+          <h1 className={styles.largeTitle}>Есть вопросы?</h1>
 
-          <p>Оставьте заявку и мы вам<br /> перезвоним в течение дня.</p>
+          <p className={styles.subTitle}>
+            Оставьте заявку и мы вам
+            <br /> перезвоним в течение дня.
+          </p>
         </div>
       </div>
 
-      <div className={styles.right}>
+      <div className={styles.formWrapper}>
         <QuestionForm />
       </div>
     </div>

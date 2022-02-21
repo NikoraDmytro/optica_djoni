@@ -9,14 +9,16 @@ export const PageIntroduction = (props: PageIntroductionProps) => {
 
   return (
     <div
-      className={styles.wrapper}
+      className={styles.container}
       style={{ backgroundImage: `url(${backgroundImageUrl})` }}
     >
-      <div className={styles.pageIntroductionContainer}>
-        <Image src={pageIcon} alt="" width={120} height={120} />
+      <div className={styles.pageIntroduction}>
+        <div className={styles.icon}>
+          <Image src={pageIcon} alt="" width={120} height={120} />
+        </div>
 
         <div>
-          <h1 className={styles.title}>{page}</h1>
+          <h1 className={styles.largeTitle}>{page}</h1>
 
           <ul className={styles.navigationLinks}>
             {navigationLinks.map((link) => (

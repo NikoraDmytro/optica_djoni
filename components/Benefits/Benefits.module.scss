@@ -1,14 +1,6 @@
 @use "../../shared/styles/components";
 @use "../../shared/styles/variables";
 
-.title {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 39px;
-  margin-bottom: 1.25em;
-}
-
 .benefitsList {
   gap: 39px;
   margin: 0;
@@ -29,8 +21,8 @@
   margin: 0;
   font-size: 18px;
   margin-top: 1em;
-  line-height: 1.5em;
   font-weight: 500;
+  line-height: 1.5em;
 }
 
 .benefitDescription {

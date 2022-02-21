@@ -8,7 +8,7 @@ import styles from "./OpticsStuff.module.scss";
 
 export const OpticsStuff = () => {
   return (
-    <div className={styles.opticsStuffContainer}>
+    <div className={styles.container_white}>
       <h1 className={styles.title}>Команда Оптика Джони</h1>
 
       <div className={styles.employeesBlock}>
@@ -23,7 +23,7 @@ export const OpticsStuff = () => {
                 src={photo}
                 alt={getImageName(photo)}
               />
-              <h1 className={styles.employeeName}>{employee.name}</h1>
+              <h1 className={styles.subTitle}>{employee.name}</h1>
               <p className={styles.employeeSpecialization}>
                 {employee.specialization}
               </p>
