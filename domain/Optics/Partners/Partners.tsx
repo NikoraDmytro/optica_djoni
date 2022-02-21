@@ -37,7 +37,7 @@ export const OpticsPartners = () => {
         <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
         <Image {...getSliderImageProps("/image/vogue.jpeg")} />
         <Image {...getSliderImageProps("/image/vogue.jpeg")} />
-        <Image {...getSliderImageProps("/image/optica_1.png")} />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
       </Slider>
 
       <PartnersBlock

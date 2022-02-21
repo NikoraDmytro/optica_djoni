@@ -14,19 +14,18 @@ export const OpticsStuff = () => {
       <div className={styles.employeesBlock}>
         {stuff.map((employee) => {
           const photo = employee.photo;
+          const name = getImageName(photo);
 
           return (
-            <div key={getImageName(photo)}>
-              <Image
-                width={370}
-                height={400}
-                src={photo}
-                alt={getImageName(photo)}
-              />
+            <div key={name}>
+              <Image width={370} height={400} src={photo} alt={name} />
+
               <h1 className={styles.subTitle}>{employee.name}</h1>
+
               <p className={styles.employeeSpecialization}>
                 {employee.specialization}
               </p>
+
               <strong className={styles.employeeExperience}>
                 {employee.experience} лет опыта
               </strong>

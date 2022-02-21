@@ -8,8 +8,8 @@ import { ListOfServicesProps } from "../../shared/types/Props";
 export const ListOfServices = (props: ListOfServicesProps) => {
   const { title, subTitle, services, margin } = props;
 
-  const renderListItem = (service: Service) => (
-    <li style={{ marginBottom: margin }}>
+  const renderListItem = (service: Service, index: number) => (
+    <li key={index} style={{ marginBottom: margin }}>
       <div className={styles.service}>
         <div className={styles.ticIcon}>
           <Image src="/icons/tic.svg" alt="" width={24} height={24} />
@@ -31,7 +31,7 @@ export const ListOfServices = (props: ListOfServicesProps) => {
       <h3 className={styles.servicesSubtitle}>{subTitle}</h3>
 
       <ul className={styles.servicesList}>
-        {services.map((service) => renderListItem(service))}
+        {services.map((service, index) => renderListItem(service, index))}
       </ul>
     </div>
   );
