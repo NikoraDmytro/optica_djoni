@@ -21,7 +21,7 @@ export const useCarousel = (items: any[]) => {
 
     setTimeout(() => {
       setCurrent(index);
-    });
+    }, 10);
   };
 
   const fromTheEnd = (index: number) => {
@@ -29,7 +29,7 @@ export const useCarousel = (items: any[]) => {
 
     setTimeout(() => {
       setCurrent(index);
-    });
+    }, 10);
   };
 
   const changeCurrent = (index: number) => {

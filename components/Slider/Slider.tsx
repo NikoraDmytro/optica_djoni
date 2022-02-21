@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import classNames from "classnames";
 
 import { Switchers } from "./components/Switchers";
@@ -8,26 +8,31 @@ import styles from "./Slider.module.scss";
 import { useCarousel } from "./utils/useCarousel";
 
 import { SliderProps } from "../../shared/types/Props";
+import { useContainerWidth } from "./utils/useContainerSize";
 
 export const Slider = (props: SliderProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
   const { children, width, height, margin } = props;
 
+  const { containerWidth, containerRef } = useContainerWidth(width);
   const { current, loopedList, firstIndex, lastIndex, changeCurrent } =
     useCarousel(children);
 
   const disableTransition = current < firstIndex || current > lastIndex;
 
-  const containerWidth = containerRef.current?.clientWidth || width;
   const initialTranslate = (containerWidth - width) * 0.85;
   const translateValue = -(width + margin) * current;
 
   return (
-    <div ref={containerRef} className={styles.sliderContainer} style={{ maxWidth: width * 2 }}>
+    <div
+      ref={containerRef}
+      className={styles.sliderContainer}
+      style={{ maxWidth: width * 2 }}
+    >
       <div className={styles.slider}>
         <div
           style={{
-            transform: `translateX(${translateValue + initialTranslate}px)`,
+            transform: `translateX(${translateValue}px)`,
+            marginLeft: `${initialTranslate}px`,
           }}
           className={classNames({
             [styles.sliderContent]: true,

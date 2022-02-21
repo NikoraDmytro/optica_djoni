@@ -12,7 +12,7 @@
 .sliderContent {
   display: flex;
   flex-direction: row;
-  transition: all 1s ease;
+  transition: transform 1s ease;
   &.noTransition {
     transition: none;
   }
