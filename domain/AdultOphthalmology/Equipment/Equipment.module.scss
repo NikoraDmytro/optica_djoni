@@ -1,0 +1,9 @@
+@use "../../../shared/styles/components";
+
+.EquipmentTitleBlock {
+  @extend .container_white;
+  padding: 2.5em 6.25em;
+  h1 {
+    margin: 0;
+  }
+}

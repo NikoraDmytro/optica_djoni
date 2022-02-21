@@ -21,20 +21,9 @@ import Essilor from "./icons/essilor.png";
 import Rodenstock from "./icons/rodenstock.png";
 
 import styles from "./Partners.module.scss";
+import { getSliderImageProps } from "../../../utils/getSliderImage";
 
 export const OpticsPartners = () => {
-  const getImage = (url: string) => {
-    return (
-      <Image
-        src={url}
-        alt=""
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-      />
-    );
-  };
-
   return (
     <>
       <PartnersBlock
@@ -44,11 +33,11 @@ export const OpticsPartners = () => {
       />
 
       <Slider width={1200} height={635} margin={42}>
-        {getImage("/image/vogue.jpeg")}
-        {getImage("/image/optica_1.jpeg")}
-        {getImage("/image/vogue.jpeg")}
-        {getImage("/image/vogue.jpeg")}
-        {getImage("/image/optica_1.jpeg")}
+        <Image {...getSliderImageProps("/image/vogue.jpeg")} />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
+        <Image {...getSliderImageProps("/image/vogue.jpeg")} />
+        <Image {...getSliderImageProps("/image/vogue.jpeg")} />
+        <Image {...getSliderImageProps("/image/optica_1.png")} />
       </Slider>
 
       <PartnersBlock
@@ -57,11 +46,11 @@ export const OpticsPartners = () => {
       />
 
       <Slider width={1200} height={635} margin={42}>
-        {getImage("/image/air_optix.png")}
-        {getImage("/image/optica_1.jpeg")}
-        {getImage("/image/air_optix.png")}
-        {getImage("/image/air_optix.png")}
-        {getImage("/image/optica_1.jpeg")}
+        <Image {...getSliderImageProps("/image/air_optix.png")} />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
+        <Image {...getSliderImageProps("/image/air_optix.png")} />
+        <Image {...getSliderImageProps("/image/air_optix.png")} />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
       </Slider>
 
       <PartnersBlock

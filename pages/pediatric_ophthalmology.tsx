@@ -7,7 +7,7 @@ import pediatricOphthalmologyIcon from "../public/icons/child_ophthalmology.svg"
 import {
   HardwareTreatmentServices,
   PediatricOphthalmologyServices,
-} from "../domain/PediatricOphthalmology/Services";
+} from "../domain/PediatricOphthalmology/OphthalmologyServices";
 import { PediatricOphthalmologySlider } from "../domain/PediatricOphthalmology/Slider";
 import { PediatricOphthalmologyDoctorInfo } from "../domain/PediatricOphthalmology/DoctorInfo";
 import { PediatricOphthalmologySpecialDevices } from "../domain/PediatricOphthalmology/Devices";

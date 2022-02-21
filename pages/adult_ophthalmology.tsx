@@ -1,23 +1,13 @@
 import { Layout } from "../components/Layout";
 import { UserComments } from "../components/UserComments";
 import { PageIntroduction } from "../components/PageIntroduction";
-import { FrequentQuestion } from "../components/FrequentQuestions";
+
+import { AdultOphthalmologyServices } from "../domain/AdultOphthalmology/OphthalmologyServices";
+import { AdultOphthalmologyDoctorInfo } from "./../domain/AdultOphthalmology/DoctorInfo/DoctorInfo";
+import { AdultOphthalmologyEquipment } from "./../domain/AdultOphthalmology/Equipment/Equipment";
+import { AdultOphthalmologyFrequentQuestions } from "../domain/AdultOphthalmology/FrequentQuestions";
 
 import doctorIcon from "../public/icons/doctor.svg";
-
-const frequentQuestions = [
-  {
-    text: "Можно ли ребенка записать ко взрослому доктору?",
-    answer: `Ребенка необходимо записывать непосредственно к детскому доктору, т. к обследование у детей проходит по другим нормам и протоколам чем у взрослых.
-    У взрослых людей глаз уже сформирован и не растет, а у детей глаза находятся в постоянном росте и за этим ростом и развитием необходимо следить. 
-    Вот этому вопросу детский доктор и уделяет большую часть времени.`,
-  },
-  {
-    text: "Зачем ребенку расширять зрачки при осмотре?",
-    answer:
-      "В случае чего, можно вызвать ментов и сказать что ребенок накуренный!",
-  },
-];
 
 function AdultOphthalmology() {
   const backgroundImageUrl =
@@ -32,7 +22,13 @@ function AdultOphthalmology() {
         navigationLinks={["Наши услуги", "Врач"]}
       />
 
-      <FrequentQuestion questions={frequentQuestions} />
+      <AdultOphthalmologyServices />
+
+      <AdultOphthalmologyDoctorInfo />
+
+      <AdultOphthalmologyEquipment />
+
+      <AdultOphthalmologyFrequentQuestions />
 
       <UserComments />
     </Layout>

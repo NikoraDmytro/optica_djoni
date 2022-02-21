@@ -1,0 +1,1 @@
+export { AdultOphthalmologyFrequentQuestions } from "./FrequentQuestions";
