@@ -1,18 +1,5 @@
 import { ReactNode } from "react";
-
-export type PageName =
-  | "home"
-  | "optics"
-  | "night_eyeglass"
-  | "pediatric_ophthalmology"
-  | "adult_ophthalmology"
-  | "workshop";
-
-export type Benefit = {
-  icon: StaticImageData;
-  name: string;
-  description?: string; 
-}
+import { Benefit, PageName, Service } from "./Types";
 
 export type LayoutProps = {
   page: PageName;
@@ -42,4 +29,11 @@ export type SliderProps = {
 export type BenefitsProps = {
   blockTitle?: string;
   benefits: Benefit[];
+}
+
+export type ListOfServicesProps = {
+  title: string;
+  margin: number;
+  subTitle?: string;
+  services: Service[];
 }

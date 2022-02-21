@@ -1,0 +1,1 @@
+export { PediatricOphthalmologySlider } from "./Slider";

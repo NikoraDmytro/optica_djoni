@@ -1,0 +1,41 @@
+@use "../../shared/styles/base";
+@use "../../shared/styles/variables";
+@use "../../shared/styles/components";
+
+.servicesSubtitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 40px;
+}
+
+.servicesList {
+  @include base.resetList();
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+}
+
+.ticIcon {
+  margin-right: 1em;
+}
+
+.clarification {
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 0.75em;
+  line-height: 1.5em;
+  color: variables.$secondary;
+}
