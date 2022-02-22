@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { PageName } from "../../../../shared/types/Props";
+import { PageName } from "../../../../shared/types/Types";
 
 import { NavBar } from "../NavBar";
 import {
