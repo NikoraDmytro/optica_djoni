@@ -1,7 +1,8 @@
 import Link from "next/link";
 import classNames from "classnames";
 
-import { NavBarProps, PageName } from "../../../../shared/types/Props";
+import { PageName } from "../../../../shared/types/Types";
+import { NavBarProps } from "../../../../shared/types/Props";
 
 import styles from "./NavBar.module.scss";
 
