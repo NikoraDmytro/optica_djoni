@@ -19,10 +19,13 @@ function Optics() {
         page="Оптика"
         pageIcon={glassesIcon}
         backgroundImageUrl={backgroundImageUrl}
-        navigationLinks={[
-          "Солнцезащитные очки",
-          "Контактные линзы",
-          "Линзы для очков",
+        anchorTags={[
+          {
+            name: "Солнцезащитные очки",
+            href: "#sunglasses",
+          },
+          { name: "Контактные линзы", href: "#contactLenses" },
+          { name: "Линзы для очков", href: "#eyeglassLenses" },
         ]}
       />
 

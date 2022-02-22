@@ -19,6 +19,7 @@ const services: Service[] = [
 export const HardwareTreatmentServices = () => {
   return (
     <ListOfServices
+      id="hardwareTreatment"
       title="Аппаратное лечение : это восстановление зрения без хирургических вмешательств."
       subTitle="Кабинет аппаратного лечения поможет справится с такими диагнозами как:"
       services={services}

@@ -19,7 +19,16 @@ function AdultOphthalmology() {
         page="Взрослая офтальмология"
         pageIcon={doctorIcon}
         backgroundImageUrl={backgroundImageUrl}
-        navigationLinks={["Наши услуги", "Врач"]}
+        anchorTags={[
+          {
+            name: "Наши услуги",
+            href: "#adultOphthalmologyServices",
+          },
+          {
+            name: "Врач",
+            href: "#adultOphthalmologyDoctor",
+          },
+        ]}
       />
 
       <AdultOphthalmologyServices />

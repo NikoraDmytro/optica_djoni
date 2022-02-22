@@ -23,7 +23,20 @@ function PediatricOphthalmology() {
         page="Детская офтальмология"
         pageIcon={pediatricOphthalmologyIcon}
         backgroundImageUrl={backgroundImageUrl}
-        navigationLinks={["Наши услуги", "Аппаратное лечение", "Врач"]}
+        anchorTags={[
+          {
+            name: "Наши услуги",
+            href: "#pediatricOphthalmologyServices",
+          },
+          {
+            name: "Аппаратное лечение",
+            href: "#hardwareTreatment",
+          },
+          {
+            name: "Врач",
+            href: "#pediatricOphthalmologyDoctor",
+          },
+        ]}
       />
 
       <PediatricOphthalmologyServices />

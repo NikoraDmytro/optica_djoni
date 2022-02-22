@@ -16,7 +16,7 @@ export const NightEyeGlassCharacteristics = () => {
   };
 
   return (
-    <div className={styles.container_white}>
+    <div className={styles.container_white} id="nightEyeGlassCharacteristics">
       <h1 className={styles.title}>ХАРАКТЕРИСТИКИ</h1>
 
       <div className={styles.characteristics}>

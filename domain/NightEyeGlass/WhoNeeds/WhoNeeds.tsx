@@ -16,7 +16,7 @@ export const WhoNeedsNightEyeglass = () => {
   };
 
   return (
-    <div className={styles.container_white}>
+    <div className={styles.container_white} id="whoNeedsNightEyeGlass">
       <h1 className={styles.title}>Кто использует жёсткие ночные линзы?</h1>
 
       <ul className={styles.personsList}>

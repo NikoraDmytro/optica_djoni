@@ -17,7 +17,12 @@ function Workshop() {
         page="Мастерская"
         pageIcon={workshopIcon}
         backgroundImageUrl={backgroundImageUrl}
-        navigationLinks={["Наши услуги"]}
+        anchorTags={[
+          {
+            name: "Наши услуги",
+            href: "#workshopServices",
+          },
+        ]}
       />
 
       <WorkShopServices />

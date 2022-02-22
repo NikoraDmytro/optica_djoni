@@ -6,14 +6,15 @@ import styles from "./PartnersBlock.module.scss";
 import { getImageName } from "../../../../../utils/getImageName";
 
 interface Props {
+  id?: string;
   text: string;
   title?: string;
   icons: StaticImageData[];
 }
 
-export const PartnersBlock = ({ title, text, icons }: Props) => {
+export const PartnersBlock = ({ title, text, icons, id }: Props) => {
   return (
-    <div className={styles.partnersBlockContainer}>
+    <div className={styles.partnersBlockContainer} id={id}>
       {title && <h1 className={styles.title}>{title}</h1>}
 
       <p

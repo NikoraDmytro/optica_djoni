@@ -1,10 +1,10 @@
-import { useRef, useState, useLayoutEffect, ReactElement } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export const useContainerWidth = (defaultWidth: number) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(defaultWidth);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     function getContainerWidth() {
       if (containerRef.current) {
         setContainerWidth(containerRef.current.clientWidth);

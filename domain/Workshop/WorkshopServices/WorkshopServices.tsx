@@ -53,6 +53,7 @@ const services: Service[] = [
 export const WorkShopServices = () => {
   return (
     <ListOfServices
+      id="workshopServices"
       title="Какие услуги предоставляет мастерская в салоне Оптика Джони"
       services={services}
       margin={30}

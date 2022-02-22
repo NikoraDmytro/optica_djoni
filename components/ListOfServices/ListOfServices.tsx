@@ -25,7 +25,7 @@ export const ListOfServices = (props: ListOfServicesProps) => {
   );
 
   return (
-    <div className={styles.container_white}>
+    <div className={styles.container_white} id={props.id}>
       <h1 className={styles.title}>{title}</h1>
 
       <h3 className={styles.servicesSubtitle}>{subTitle}</h3>

@@ -5,7 +5,7 @@ import styles from "./DoctorInfo.module.scss";
 export const PediatricOphthalmologyDoctorInfo = () => {
   return (
     <>
-      <div className={styles.container_white}>
+      <div className={styles.container_white} id="pediatricOphthalmologyDoctor">
         <div className={styles.doctorImage}>
           <Image src="/image/doctor_1.png" alt="" layout="fill" />
         </div>

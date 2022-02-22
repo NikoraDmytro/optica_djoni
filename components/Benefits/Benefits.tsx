@@ -6,9 +6,9 @@ import { getImageName } from "../../utils/getImageName";
 
 import styles from "./Benefits.module.scss";
 
-export const Benefits = ({ benefits, blockTitle }: BenefitsProps) => {
+export const Benefits = ({ benefits, blockTitle, id }: BenefitsProps) => {
   return (
-    <div className={styles.container_blue}>
+    <div className={styles.container_blue} id={id}>
       {blockTitle && <h1 className={styles.title}>{blockTitle}</h1>}
 
       <ul className={styles.benefitsList}>

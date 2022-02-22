@@ -7,6 +7,7 @@ import doctorIcon from "../../../public/icons/doctor.svg";
 export const NightEyeGlassBenefits = () => {
   return (
     <Benefits
+      id="nightEyeGlassBenefits"
       blockTitle="ПРЕИМУЩЕСТВА"
       benefits={[
         {

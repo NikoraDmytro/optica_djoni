@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 
 import styles from "./PageIntroduction.module.scss";
@@ -5,7 +6,7 @@ import styles from "./PageIntroduction.module.scss";
 import { PageIntroductionProps } from "../../shared/types/Props";
 
 export const PageIntroduction = (props: PageIntroductionProps) => {
-  const { page, pageIcon, backgroundImageUrl, navigationLinks } = props;
+  const { page, pageIcon, backgroundImageUrl, anchorTags } = props;
 
   return (
     <div
@@ -20,11 +21,11 @@ export const PageIntroduction = (props: PageIntroductionProps) => {
         <div>
           <h1 className={styles.largeTitle}>{page}</h1>
 
-          <ul className={styles.navigationLinks}>
-            {navigationLinks.map((link) => (
-              <li key={link} className={styles.navigationLink}>
-                {link}
-              </li>
+          <ul className={styles.archonTags}>
+            {anchorTags.map((anchor) => (
+              <Link key={anchor.name} href={anchor.href} passHref>
+                <li className={styles.archon}>{anchor.name}</li>
+              </Link>
             ))}
           </ul>
         </div>

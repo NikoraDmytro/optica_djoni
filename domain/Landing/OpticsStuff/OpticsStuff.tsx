@@ -18,7 +18,15 @@ export const OpticsStuff = () => {
 
           return (
             <div key={name}>
-              <Image width={370} height={400} src={photo} alt={name} />
+              <div className={styles.employeePhoto}>
+                <Image
+                  src={photo}
+                  alt={name}
+                  layout="fill"
+                  objectFit="cover"
+                  objectPosition="center"
+                />
+              </div>
 
               <h1 className={styles.subTitle}>{employee.name}</h1>
 

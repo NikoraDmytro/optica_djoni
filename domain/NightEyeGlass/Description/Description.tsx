@@ -5,7 +5,7 @@ import styles from "./Description.module.scss";
 
 export const NightEyeGlassDescription = () => {
   return (
-    <div className={styles.container_white}>
+    <div className={styles.container_white} id="nightEyeGlassDescription">
       <div className={styles.eyeGlassImage}>
         <Image src="/image/nightEyeGlass.png" alt="" layout="fill" />
       </div>

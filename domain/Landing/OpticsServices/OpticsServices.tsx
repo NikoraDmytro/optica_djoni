@@ -1,9 +1,13 @@
+import Link from "next/link";
 import Image from "next/image";
 import { getImageName } from "../../../utils/getImageName";
 
 import services from "./services.json";
 
 import styles from "./OpticsServices.module.scss";
+import { PageName } from "../../../shared/types/Types";
+
+const page: PageName = "night_eyeglass";
 
 export const OpticsServices = () => {
   return (
@@ -43,7 +47,11 @@ export const OpticsServices = () => {
 
               <h1 className={styles.serviceName}>{service.title}</h1>
 
-              <button className={styles.learnMoreButton}>Подробнее</button>
+              <Link href={service.link} passHref>
+                <button className={styles.learnMoreButton}>
+                  <a>Подробнее</a>
+                </button>
+              </Link>
             </div>
           );
         })}

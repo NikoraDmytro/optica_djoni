@@ -3,7 +3,6 @@ import { ImageProps } from "next/image";
 export const getSliderImageProps = (url: string): ImageProps => {
   return {
     src: url,
-    alt: "",
     layout: "fill",
     objectFit: "cover",
     objectPosition: "center",

@@ -21,3 +21,8 @@ export type Question = {
   text: string;
   answer: string;
 };
+
+export type AnchorTag = {
+  name: string;
+  href: string;
+};

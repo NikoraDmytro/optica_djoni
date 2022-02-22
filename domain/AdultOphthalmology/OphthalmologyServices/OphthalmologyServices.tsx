@@ -37,5 +37,12 @@ const services: Service[] = [
 ];
 
 export const AdultOphthalmologyServices = () => {
-  return <ListOfServices title="НАШИ УСЛУГИ" services={services} margin={30} />;
+  return (
+    <ListOfServices
+      id="adultOphthalmologyServices"
+      title="НАШИ УСЛУГИ"
+      services={services}
+      margin={30}
+    />
+  );
 };

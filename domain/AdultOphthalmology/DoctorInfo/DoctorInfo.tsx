@@ -4,7 +4,7 @@ import styles from "./DoctorInfo.module.scss";
 
 export const AdultOphthalmologyDoctorInfo = () => {
   return (
-    <div className={styles.doctorInfoContainer}>
+    <div className={styles.doctorInfoContainer} id="adultOphthalmologyDoctor">
       <div className={styles.doctorImage}>
         <Image src="/image/doctor_2.png" alt="" layout="fill" />
       </div>

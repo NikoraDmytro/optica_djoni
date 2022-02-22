@@ -25,13 +25,14 @@
   }
 }
 
-.navigationLinks {
+.archonTags {
   @include base.resetList();
   display: flex;
   flex-direction: row;
 }
 
-.navigationLink {
+.archon {
+  cursor: pointer;
   padding: 0.625em;
   font-weight: 500;
   line-height: 22px;

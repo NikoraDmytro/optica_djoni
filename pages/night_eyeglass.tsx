@@ -20,11 +20,23 @@ function NightEyeglass() {
         page="Ночная контактная линза OK VISION"
         pageIcon={eyeGlassIcon}
         backgroundImageUrl={backgroundImageUrl}
-        navigationLinks={[
-          "Что это такое?",
-          "Преимущество",
-          "Характеристики",
-          "Кому подходит",
+        anchorTags={[
+          {
+            name: "Что это такое?",
+            href: "#nightEyeGlassDescription",
+          },
+          {
+            name: "Преимущество",
+            href: "#nightEyeGlassBenefits",
+          },
+          {
+            name: "Характеристики",
+            href: "#nightEyeGlassCharacteristics",
+          },
+          {
+            name: "Кому подходит",
+            href: "#whoNeedsNightEyeGlass",
+          },
         ]}
       />
 

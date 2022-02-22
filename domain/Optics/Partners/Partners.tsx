@@ -27,33 +27,36 @@ export const OpticsPartners = () => {
   return (
     <>
       <PartnersBlock
+        id="sunglasses"
         title="Мы имеем огромный выбор оправ (более 1000 моделей), контактных линз и солнцезащитных очков."
         text="Работаем с такими известными брендами как: Ray Ban, Vogue, Guess, Armani, Prada, CARRERA, Marius Morel, VALENTINE YUDASHKIN, Polaroid Guy Laroche, Enni Marco, Baldinini, Helen Rocha, Ana Hickmann, Perfrtto, Ozzie, Ben X, Swing, La Stella, Grand и другие."
         icons={[RayBan, Vogue, Guess, Armani, Prada, Carrera]}
       />
 
       <Slider width={1200} height={635} margin={42}>
-        <Image {...getSliderImageProps("/image/vogue.jpeg")} />
-        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
-        <Image {...getSliderImageProps("/image/vogue.jpeg")} />
-        <Image {...getSliderImageProps("/image/vogue.jpeg")} />
-        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
+        <Image {...getSliderImageProps("/image/vogue.jpeg")} alt="" />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} alt="" />
+        <Image {...getSliderImageProps("/image/vogue.jpeg")} alt="" />
+        <Image {...getSliderImageProps("/image/vogue.jpeg")} alt="" />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} alt="" />
       </Slider>
 
       <PartnersBlock
+        id="contactLenses"
         text="По контактным линзам работаем с такими производителями как: Alcon, Bausch + Lomb, CooperVision, Johnson & Johnson, OK Vision и многие другие."
         icons={[Alcon, BauschLomb, CooperVision, Johnson, OkVision]}
       />
 
       <Slider width={1200} height={635} margin={42}>
-        <Image {...getSliderImageProps("/image/air_optix.png")} />
-        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
-        <Image {...getSliderImageProps("/image/air_optix.png")} />
-        <Image {...getSliderImageProps("/image/air_optix.png")} />
-        <Image {...getSliderImageProps("/image/optica_1.jpeg")} />
+        <Image {...getSliderImageProps("/image/air_optix.png")} alt="" />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} alt="" />
+        <Image {...getSliderImageProps("/image/air_optix.png")} alt="" />
+        <Image {...getSliderImageProps("/image/air_optix.png")} alt="" />
+        <Image {...getSliderImageProps("/image/optica_1.jpeg")} alt="" />
       </Slider>
 
       <PartnersBlock
+        id="eyeglassLenses"
         text="Работаем со всеми поставщиками линз для очков, которые представлены в Украине: Hoya, Tokai, Zeiss, Essilor, Rodenstock, Rupp & Hubrach, Divel, Le Perle и другие."
         icons={[Hoya, Tokai, Zeiss, Essilor, Rodenstock]}
       />
