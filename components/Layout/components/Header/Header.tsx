@@ -1,15 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import {
-  CompanyContacts,
-  CompanyLocation,
-  CompanyWorkingHours,
-} from "../CompanyInfo";
-
 import styles from "./Header.module.scss";
 
-export const Header = () => {
+import { PageName } from "../../../../shared/types/Types";
+
+import { HeaderContent } from "./components/HeaderContent";
+import { useState } from "react";
+
+export const Header = ({ currentPage }: { currentPage: PageName }) => {
+  const [visible, setVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setVisible(!visible);
+  };
+
   return (
     <header className={styles.header}>
       <Link href="/">
@@ -18,32 +23,17 @@ export const Header = () => {
         </a>
       </Link>
 
-      <button className={styles.headerMenu}>
-        <Image src="/icons/menu.svg" alt="Menu" width={32} height={32} />
-      </button>
+      {!visible && (
+        <button onClick={toggleVisibility} className={styles.headerMenu}>
+          <Image src="/icons/menu.svg" alt="Menu" width={32} height={32} />
+        </button>
+      )}
 
-      <div className={styles.headerContent}>
-        <div className={styles.locationContainer}>
-          <CompanyLocation />
-        </div>
-
-        <div className={styles.workingHoursContainer}>
-          <CompanyWorkingHours />
-        </div>
-
-        <div className={styles.contactsContainer}>
-          <CompanyContacts />
-        </div>
-
-        <div className={styles.selectContainer}>
-          <strong className={styles.strongBlock}>Язык сайта</strong>
-
-          <select id="language" className={styles.selectInput}>
-            <option id="language">Русский</option>
-            <option id="language">English</option>
-          </select>
-        </div>
-      </div>
+      <HeaderContent
+        visible={visible}
+        currentPage={currentPage}
+        toggleVisibility={toggleVisibility}
+      />
     </header>
   );
 };

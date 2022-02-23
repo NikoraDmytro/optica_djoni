@@ -18,7 +18,7 @@ export const Layout = (props: LayoutProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Header currentPage={props.page} />
 
       <div className={styles.navBarContainer}>
         <NavBar currentPage={props.page} orientation="horizontal" />

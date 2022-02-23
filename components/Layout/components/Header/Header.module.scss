@@ -1,5 +1,4 @@
 @use "../../../../shared/styles/base";
-@use "../../../../shared/styles/components";
 
 .header {
   @include base.flexCenter();
@@ -11,17 +10,10 @@
 .headerMenu {
   @include base.resetButton();
   display: none;
-  margin-left: auto;
   position: relative;
   > span {
     overflow: visible !important;
   }
-}
-
-.headerContent {
-  @include base.flexCenter();
-  flex-grow: 0;
-  flex-shrink: 0;
 }
 
 .headerLogo {
@@ -31,105 +23,27 @@
   position: relative;
 }
 
-.locationContainer {
-  margin-right: 5.25em;
-}
-
-.workingHoursContainer {
-  margin-right: 4.75em;
-}
-
-.contactsContainer {
-  margin-right: 3.75em;
-}
-
-.selectInput {
-  width: 7em;
-  font-size: 1em;
-  padding: 0.5em;
-  border-radius: 5px;
-  border: 1px solid #6e7a7c;
-  background-color: transparent;
-}
-
-.selectContainer {
-  font-size: 16px;
-}
-
 @media screen and (max-width: 1400px) {
   .headerLogo {
     margin-right: 5%;
-  }
-
-  .locationContainer {
-    margin-right: 3em;
-  }
-
-  .workingHoursContainer {
-    margin-right: 2.5em;
-  }
-
-  .contactsContainer {
-    margin-right: 1.5em;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .workingHoursContainer {
-    width: 100px;
-  }
-
-  .locationContainer {
-    width: 200px;
-  }
-
-  .contactsContainer {
-    width: 170px;
-  }
-
-  .selectContainer {
-    font-size: 14px;
-  }
-
-  .selectInput {
-    padding: 0.25em;
-    width: fit-content;
   }
 }
 
 @media screen and (max-width: 900px) {
   .headerLogo {
     margin-right: 5%;
-  }
-
-  .locationContainer {
-    width: 175px;
-    font-size: 14px;
-    margin-right: 1em;
-  }
-
-  .workingHoursContainer {
-    font-size: 14px;
-    margin-right: 1.5em;
-    b {
-      font-size: 16px;
-    }
-  }
-
-  .contactsContainer {
-    width: 150px;
-    font-size: 14px;
-    margin-right: 1em;
+    margin-right: auto;
   }
 }
 
 @media screen and (max-width: 750px) {
   .header {
+    height: 5em;
     padding: 1em 2.5em;
   }
 
-  .headerContent {
-    display: none;
+  .headerLogo {
+    width: 120px;
   }
 
   .headerMenu {

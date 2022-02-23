@@ -1,0 +1,183 @@
+@use "../../../../../shared/styles/base";
+@use "../../../../../shared/styles/components";
+
+.headerContent {
+  @include base.flexCenter();
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.companyInfoContainer {
+  @include base.flexCenter();
+}
+
+.headerNavBar {
+  display: none;
+}
+
+.locationContainer {
+  margin-right: 5.25em;
+}
+
+.workingHoursContainer {
+  margin-right: 4.75em;
+}
+
+.contactsContainer {
+  margin-right: 3.75em;
+}
+
+.selectContainer {
+  font-size: 16px;
+}
+
+.selectInput {
+  width: 7em;
+  padding: 0.5em;
+  font-size: 1em;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #6e7a7c;
+  background-color: transparent;
+}
+
+.closeMenu {
+  @include base.resetButton();
+  top: 1.5em;
+  width: 32px;
+  right: 1.5em;
+  height: 32px;
+  display: none;
+  position: absolute;
+}
+
+@media screen and (max-width: 1400px) {
+  .locationContainer {
+    margin-right: 3em;
+  }
+
+  .workingHoursContainer {
+    margin-right: 2.5em;
+  }
+
+  .contactsContainer {
+    margin-right: 1.5em;
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 750px) {
+  .workingHoursContainer {
+    width: 100px;
+  }
+
+  .locationContainer {
+    width: 200px;
+  }
+
+  .contactsContainer {
+    width: 170px;
+  }
+
+  .selectContainer {
+    font-size: 14px;
+  }
+
+  .selectInput {
+    padding: 0.25em;
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 750px) {
+  .locationContainer {
+    width: 175px;
+    font-size: 14px;
+    margin-right: 1em;
+  }
+
+  .workingHoursContainer {
+    font-size: 14px;
+    margin-right: 1.5em;
+    b {
+      font-size: 16px;
+    }
+  }
+
+  .contactsContainer {
+    width: 150px;
+    font-size: 14px;
+    margin-right: 1em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .headerContent {
+    top: 0;
+    width: 60%;
+    z-index: 6;
+    left: 100%;
+    height: 100%;
+    overflow: auto;
+    position: fixed;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    background-color: #fafafa;
+    box-shadow: -1px 0 8px #6e7a7c;
+
+    &.visible {
+      opacity: 1;
+      transform: translateX(-100%);
+      transition-duration: 0.5s;
+    }
+
+    &.hidden {
+      opacity: 0;
+      transition-duration: 0.5s;
+      transform: translateX(0);
+    }
+  }
+
+  .closeMenu {
+    display: block;
+  }
+
+  .headerNavBar {
+    width: 100%;
+    display: block;
+    padding: 2.5em 1em;
+    background-color: white;
+  }
+
+  .selectContainer {
+    width: 100%;
+    padding: 2em;
+  }
+
+  .companyInfoContainer {
+    width: 100%;
+    padding: 1em;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .locationContainer {
+    padding: 0.5em 0.75em;
+    margin-bottom: 1.5em;
+  }
+
+  .workingHoursContainer {
+    padding: 0.5em 0.75em;
+    margin-bottom: 1.5em;
+  }
+
+  .contactsContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerContent {
+    width: 100%;
+  }
+}
