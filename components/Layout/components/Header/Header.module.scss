@@ -32,21 +32,27 @@
 @media screen and (max-width: 900px) {
   .headerLogo {
     margin-right: 5%;
-    margin-right: auto;
   }
 }
 
 @media screen and (max-width: 750px) {
   .header {
-    height: 5em;
+    height: 6em;
     padding: 1em 2.5em;
   }
 
   .headerLogo {
-    width: 120px;
+    width: 140px;
+    margin-right: auto;
   }
 
   .headerMenu {
     display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerLogo {
+    width: 110px;
   }
 }

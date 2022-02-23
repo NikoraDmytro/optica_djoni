@@ -7,6 +7,8 @@
   text-align: center;
   flex-direction: row;
   .separator {
+    margin: 0 1em;
+    display: block;
     height: 1.375em;
     border-right: 1px solid rgba(110, 122, 124, 0.4);
   }
@@ -21,6 +23,6 @@
 }
 
 .activeLink {
-  color: #38A0A9;
+  color: #38a0a9;
   font-weight: 700;
 }

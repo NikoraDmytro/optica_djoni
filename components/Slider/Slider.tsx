@@ -8,7 +8,7 @@ import styles from "./Slider.module.scss";
 import { useCarousel } from "./utils/useCarousel";
 
 import { SliderProps } from "../../shared/types/Props";
-import { useContainerWidth } from "./utils/useContainerSize";
+import { useContainerWidth } from "../../utils/useContainerSize";
 
 export const Slider = (props: SliderProps) => {
   const { children, width, height, margin } = props;
