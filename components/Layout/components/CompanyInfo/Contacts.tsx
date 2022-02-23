@@ -6,7 +6,16 @@ export const CompanyContacts = () => {
   return (
     <div className={styles.contacts}>
       <div className={styles.contactsTitle}>
-        <Image src="/icons/phone.svg" alt="" width={18} height={18} />
+        <div className={styles.phoneIcon}>
+          <Image
+            src="/icons/phone.svg"
+            alt=""
+            width={18}
+            height={18}
+            layout="fixed"
+          />
+        </div>
+
         <strong className={styles.strongBlock}>Запись по телефону</strong>
       </div>
 

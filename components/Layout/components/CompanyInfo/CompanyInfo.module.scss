@@ -1,3 +1,4 @@
+@use "../../../../shared/styles/base";
 @use "../../../../shared/styles/components";
 
 .address {
@@ -12,9 +13,12 @@
   border-radius: 5px;
   padding: 0.5em 0.75em;
   background-color: #e7f4f2;
-  .phone {
-    display: block;
-  }
+}
+
+.phoneIcon {
+  display: flex;
+  margin-right: 12px;
+  align-items: center;
 }
 
 .contactsTitle {
@@ -22,16 +26,21 @@
   margin-bottom: 10px;
   strong {
     margin-bottom: 0;
-    margin-left: 10px;
   }
 }
 
 .workingHours {
+  @include base.flexCenter(column);
+  min-height: 5em;
+  text-align: end;
+  justify-content: space-between;
   b {
     width: 3.5em;
-    text-align: end;
     font-weight: 500;
     margin-right: 10px;
     display: inline-block;
+  }
+  p {
+    margin: 0;
   }
 }

@@ -13,36 +13,36 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <a>
-          <Image
-            src="/image/logo.svg"
-            alt="Logo"
-            width={180}
-            height={80}
-            layout="fixed"
-          />
+        <a className={styles.headerLogo}>
+          <Image src="/image/logo.svg" alt="Logo" layout="fill" />
         </a>
       </Link>
 
-      <div className={styles.location}>
-        <CompanyLocation />
-      </div>
+      <button className={styles.headerMenu}>
+        <Image src="/icons/menu.svg" alt="Menu" width={32} height={32} />
+      </button>
 
-      <div className={styles.workingHours}>
-        <CompanyWorkingHours />
-      </div>
+      <div className={styles.headerContent}>
+        <div className={styles.locationContainer}>
+          <CompanyLocation />
+        </div>
 
-      <div className={styles.contacts}>
-        <CompanyContacts />
-      </div>
+        <div className={styles.workingHoursContainer}>
+          <CompanyWorkingHours />
+        </div>
 
-      <div>
-        <strong className={styles.strongBlock}>Язык сайта</strong>
+        <div className={styles.contactsContainer}>
+          <CompanyContacts />
+        </div>
 
-        <select id="language" className={styles.selectInput}>
-          <option id="language">Русский</option>
-          <option id="language">English</option>
-        </select>
+        <div className={styles.selectContainer}>
+          <strong className={styles.strongBlock}>Язык сайта</strong>
+
+          <select id="language" className={styles.selectInput}>
+            <option id="language">Русский</option>
+            <option id="language">English</option>
+          </select>
+        </div>
       </div>
     </header>
   );
