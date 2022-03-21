@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import Image from "next/image";
 
 import {
@@ -8,19 +9,15 @@ import {
 
 import { NavBar } from "../../NavBar";
 
-import { PageName } from "../../../../../shared/types/Types";
-
 import styles from "./HeaderContent.module.scss";
-import classNames from "classnames";
 
 interface Props {
   visible: boolean;
-  currentPage: PageName;
   toggleVisibility: () => void;
 }
 
 export const HeaderContent = (props: Props) => {
-  const { currentPage, visible, toggleVisibility } = props;
+  const { visible, toggleVisibility } = props;
 
   const className = classNames(visible ? [styles.visible] : [styles.hidden], {
     [styles.headerContent]: true,
@@ -42,9 +39,7 @@ export const HeaderContent = (props: Props) => {
         </div>
       </div>
 
-      <div className={styles.headerNavBar}>
-        <NavBar orientation="vertical" currentPage={currentPage} />
-      </div>
+      <NavBar className={styles.headerNavBar} />
 
       <div className={styles.selectContainer}>
         <strong className={styles.strongBlock}>Язык сайта</strong>

@@ -1,15 +1,5 @@
 import { ReactNode } from "react";
-import { AnchorTag, Benefit, PageName, Question, Service } from "./Types";
-
-export type LayoutProps = {
-  page: PageName;
-  children: ReactNode;
-};
-
-export type NavBarProps = {
-  currentPage: PageName;
-  orientation: "horizontal" | "vertical";
-};
+import { AnchorTag, Benefit, Question, Service } from "./Types";
 
 export type PageIntroductionProps = {
   page: string;

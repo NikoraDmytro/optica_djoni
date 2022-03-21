@@ -3,8 +3,6 @@
 
 .headerContent {
   @include base.flexCenter();
-  flex-grow: 0;
-  flex-shrink: 0;
 }
 
 .companyInfoContainer {
@@ -14,14 +12,9 @@
 .headerNavBar {
   width: 100%;
   display: none;
+  flex-shrink: 0;
+  height: 21.25em;
   padding: 2.5em 1em;
-  background-color: white;
-
-  nav {
-    > span {
-      height: 2.5em !important;
-    }
-  }
 }
 
 .locationContainer {
@@ -151,7 +144,7 @@
   }
 
   .headerNavBar {
-    display: block;
+    display: flex;
   }
 
   .selectContainer {

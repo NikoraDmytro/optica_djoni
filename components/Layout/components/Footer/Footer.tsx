@@ -1,8 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { PageName } from "../../../../shared/types/Types";
-
 import { NavBar } from "../NavBar";
 import {
   CompanyContacts,
@@ -12,7 +10,7 @@ import {
 
 import styles from "./Footer.module.scss";
 
-export const Footer = ({ page }: { page: PageName }) => {
+export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <Link href="/">
@@ -29,7 +27,7 @@ export const Footer = ({ page }: { page: PageName }) => {
 
       <div className={styles.footerContent}>
         <div className={styles.footerInfoBlock}>
-          <NavBar currentPage={page} orientation="vertical" />
+          <NavBar style={{ height: 12.25 + "em" }} />
         </div>
 
         <div className={styles.footerInfoBlock}>

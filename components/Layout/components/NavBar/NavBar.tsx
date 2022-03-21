@@ -1,57 +1,35 @@
-import Link from "next/link";
 import classNames from "classnames";
-
-import { PageName } from "../../../../shared/types/Types";
-import { NavBarProps } from "../../../../shared/types/Props";
 
 import styles from "./NavBar.module.scss";
 
-export const NavBar = ({ orientation, currentPage }: NavBarProps) => {
-  const navBarClass = classNames({
-    [styles.navBar]: true,
-    [styles.verticalNavBar]: orientation === "vertical",
-    [styles.horizontalNavBar]: orientation === "horizontal",
+import { NavBarItem } from "./NavBarItem";
+
+interface NavBarProps {
+  className?: string;
+  fullScreen?: boolean;
+  style?: React.CSSProperties;
+}
+
+export const NavBar = (props: NavBarProps) => {
+  const navBarClass = classNames(props.className, {
+    [styles.navBar]: !props.fullScreen,
+    [styles.fullScreenNavBar]: props.fullScreen,
   });
 
-  const getLinkClassName = (pageName: PageName) => {
-    return classNames({
-      [styles.activeLink]: pageName === currentPage,
-    });
-  };
-
   return (
-    <nav className={navBarClass}>
-      <Link href="/pediatric_ophthalmology">
-        <a className={getLinkClassName("pediatric_ophthalmology")}>
-          ДЕТСКАЯ ОФТАЛЬМОЛОГИЯ
-        </a>
-      </Link>
+    <nav className={navBarClass} style={props.style}>
+      <NavBarItem
+        href={`/pediatric_ophthalmology`}
+        text="ДЕТСКАЯ ОФТАЛЬМОЛОГИЯ"
+      />
 
-      <span className={styles.separator} />
+      <NavBarItem href={`/adult_ophthalmology`} text="ВЗРОСЛАЯ ОФТАЛЬМОЛОГИЯ" />
 
-      <Link href="/adult_ophthalmology">
-        <a className={getLinkClassName("adult_ophthalmology")}>
-          ВЗРОСЛАЯ ОФТАЛЬМОЛОГИЯ
-        </a>
-      </Link>
+      <NavBarItem href={`/night_eyeglass`} text="НОЧНАЯ ЛИНЗЫ" />
 
-      <span className={styles.separator} />
+      <NavBarItem href={`/optics`} text="ОПТИКА" />
 
-      <Link href="/night_eyeglass">
-        <a className={getLinkClassName("night_eyeglass")}>НОЧНАЯ ЛИНЗЫ</a>
-      </Link>
-
-      <span className={styles.separator} />
-
-      <Link href="/optics">
-        <a className={getLinkClassName("optics")}>ОПТИКА</a>
-      </Link>
-
-      <span className={styles.separator} />
-
-      <Link href="/workshop">
-        <a className={getLinkClassName("workshop")}>МАСТЕРСКАЯ</a>
-      </Link>
+      <NavBarItem href={`/workshop`} text="МАСТЕРСКАЯ" />
     </nav>
   );
 };
