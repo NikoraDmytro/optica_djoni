@@ -16,8 +16,6 @@ export const Layout = (props: { children: ReactNode }) => {
 
       <Header />
 
-      <NavBar fullScreen />
-
       <main>
         {props.children}
         <AskQuestion />

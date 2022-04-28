@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import styles from "./Header.module.scss";
 
+import { NavBar } from "./../NavBar/NavBar";
 import { HeaderContent } from "./components/HeaderContent";
 
 export const Header = () => {
@@ -17,7 +18,7 @@ export const Header = () => {
     <header className={styles.header}>
       <Link href="/">
         <a className={styles.headerLogo}>
-          <Image src="/image/logo.svg" alt="Logo" width={182} height="80" />
+          <Image src="/image/logo.svg" alt="Logo" width={182} height={80} />
         </a>
       </Link>
 

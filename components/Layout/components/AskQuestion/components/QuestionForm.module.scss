@@ -1,5 +1,6 @@
 @use "../../../../../shared/styles/variables";
 @use "../../../../../shared/styles/base";
+@use "../../../../../shared/styles/components/buttons";
 
 .questionForm {
   width: 25em;
@@ -25,17 +26,6 @@
     padding: 0.75em 1em;
     color: variables.$secondary;
   }
-}
-
-.submitButton {
-  @include base.resetButton();
-  width: 12.5em;
-  font-size: 16px;
-  margin-top: 1em;
-  font-weight: 600;
-  padding: 0.75em 1.5em;
-  background-color: #fafafa;
-  color: variables.$lightBlue;
 }
 
 .error {

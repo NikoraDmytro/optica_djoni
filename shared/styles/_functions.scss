@@ -1,0 +1,27 @@
+@use "sass:meta";
+@use "sass:map";
+@use "./variables";
+
+@function getChevronDirection($direction) {
+  @if (meta.type-of($direction) == "number") {
+    @return $direction;
+  }
+
+  $angle: map-get(variables.$valid-directions, $direction);
+
+  @if not $angle {
+    @error "#{$direction} is not a valid direction. Expected one of #{map-keys(variables.$valid-directions)}";
+  }
+
+  @return $angle;
+}
+
+@function getBreakpoint($deviceSize) {
+  $breakpoint: map-get(variables.$breakpoints, $deviceSize);
+
+  @if not $breakpoint {
+    @error "#{$breakpoint} is not a valid direction. Expected one of #{map-keys(variables.$breakpoints)}";
+  }
+
+  @return $breakpoint;
+}

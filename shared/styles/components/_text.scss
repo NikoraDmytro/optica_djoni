@@ -1,0 +1,22 @@
+.strongBlock {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.largeTitle {
+  @extend .title;
+  font-size: 48px;
+}
+
+.subTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}

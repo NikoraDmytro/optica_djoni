@@ -1,0 +1,45 @@
+@use "../variables";
+
+%chevron {
+  border: none;
+  background: transparent;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.hamburgerMenu {
+  $border: 3px solid variables.$primary;
+  width: 24px;
+  position: relative;
+  border-bottom: $border;
+  transition: all 0.5s ease;
+
+  &::after,
+  &::before {
+    left: 0;
+    content: "";
+    width: 24px;
+    position: absolute;
+    border-bottom: $border;
+  }
+
+  &::after {
+    top: 8px;
+  }
+
+  &::before {
+    top: -8px;
+  }
+
+  &.crossed {
+    visibility: hidden;
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+  }
+}

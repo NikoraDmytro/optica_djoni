@@ -46,7 +46,7 @@ export const QuestionForm = () => {
           />
         </div>
 
-        <button type="submit" className={styles.submitButton}>
+        <button type="submit" className={styles.btn_secondary}>
           Перезвоните мне
         </button>
       </Form>

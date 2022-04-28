@@ -1,3 +1,6 @@
+@use "components/icons";
+@use "functions";
+
 @mixin flexCenter($direction: row) {
   display: flex;
   align-items: center;
@@ -5,36 +8,34 @@
   flex-direction: $direction;
 }
 
-@mixin arrowButton($size, $color, $rotate, $thickness: 1px) {
-  @include resetButton();
-  $border: $thickness solid $color;
-  width: $size;
-  height: $size;
-  border-radius: 2px;
-  border-left: $border;
-  border-bottom: $border;
-  background: transparent;
-  transform: rotate($rotate);
+@mixin setSize($width, $height: $width) {
+  width: $width;
+  height: $height;
 }
 
 @mixin resetButton() {
-  margin: 0;
-  padding: 0;
   border: none;
   outline: none;
   cursor: pointer;
   background-color: transparent;
 }
 
+@mixin chevron($size, $color, $thickness, $direction) {
+  @include setSize($size);
+  @extend %chevron;
+
+  border-color: $color;
+  border-width: $thickness;
+  border-radius: $thickness;
+  transform: rotate(functions.getChevronDirection($direction));
+}
+
 @mixin resetInput {
-  margin: 0;
-  padding: 0;
   border: none;
   outline: none;
+  font-size: 1em;
 }
 
 @mixin resetList {
-  margin: 0;
-  padding: 0;
   list-style-type: none;
 }

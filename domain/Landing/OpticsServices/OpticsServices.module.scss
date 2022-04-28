@@ -1,5 +1,6 @@
 @use "../../../shared/styles/variables";
-@use "../../../shared/styles/components";
+@use "../../../shared/styles/components/containers";
+@use "../../../shared/styles/components/buttons";
 
 .wrapper {
   margin: auto;
@@ -31,17 +32,4 @@
   font-size: 20px;
   margin-top: 18px;
   font-weight: 600;
-}
-
-.learnMoreButton {
-  width: 100%;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 0.75em;
-  margin-top: auto;
-  font-weight: 600;
-  background-color: white;
-  font-family: Montserrat;
-  color: variables.$lightBlue;
-  border: 1px solid variables.$lightBlue;
 }

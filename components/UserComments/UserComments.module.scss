@@ -1,6 +1,6 @@
 @use "../../shared/styles/base";
 @use "../../shared/styles/variables";
-@use "../../shared/styles/components";
+@use "../../shared/styles/components/containers";
 
 .commentsContainer {
   @extend .container_blue;
@@ -39,11 +39,11 @@
 }
 
 .nextCommentButton {
-  @include base.arrowButton(30px, white, -135deg, 6px);
+  @include base.chevron(22px, white, 6px, "right");
   border-radius: 4px;
 }
 
 .prevCommentButton {
-  @include base.arrowButton(30px, white, 45deg, 6px);
+  @include base.chevron(22px, white, 6px, "left");
   border-radius: 4px;
 }

@@ -1,13 +1,13 @@
 @use "../../shared/styles/base";
 @use "../../shared/styles/variables";
-@use "../../shared/styles/components";
+@use "../../shared/styles/components/containers";
 
 .questionBlock {
   padding: 1em;
   cursor: pointer;
   padding-right: 1.5em;
   margin-bottom: 1.5em;
-  background-color: variables.$lightGreen;
+  background-color: variables.$back;
   h2 {
     margin: 0;
     font-weight: 600;
@@ -15,7 +15,7 @@
   }
   &.opened {
     background-color: white;
-    border: 1px solid variables.$lightBlue;
+    border: 1px solid variables.$main;
     h2 {
       font-weight: 700;
     }
@@ -30,7 +30,7 @@
 }
 
 .showAnswerButton {
-  @include base.arrowButton(10px, #232323, -45deg, 2px);
+  @include base.chevron(8px, variables.$primary, 2px, "down");
   flex-shrink: 0;
   transition-duration: 0.25s;
   &.active {

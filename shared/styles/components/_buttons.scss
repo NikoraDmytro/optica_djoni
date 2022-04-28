@@ -1,0 +1,24 @@
+@use "../base";
+@use "../variables";
+
+%regular_btn {
+  @include base.resetButton();
+  font-size: 16px;
+  text-align: center;
+  padding: 0.75em 1.5em;
+}
+
+.btn_primary {
+  @extend %regular_btn;
+  color: white;
+  font-weight: 500;
+  background-color: variables.$main;
+}
+
+.btn_secondary {
+  @extend %regular_btn;
+  font-weight: 600;
+  color: variables.$main;
+  border: 2px solid variables.$main;
+  background-color: variables.$body_back;
+}

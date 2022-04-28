@@ -1,6 +1,29 @@
-$primary: #12272B;
-$secondary: #6E7A7C;
-$lightBlue: #7DCDD4;
-$darkBlue: #38A0A9;
-$lightGreen: #E7F4F2;
-$lightBlue-background: #D1EDF0;
+$primary: #12272b;
+$secondary: #6e7a7c;
+
+$light_main: #eaf5f4;
+$main: #7dcdd4;
+$dark_main: #38a0a9;
+
+$light_back: #fafafa;
+$back: #e7f4f2;
+$dark_back: #d1edf0;
+
+$body_back: #fafafa;
+
+$valid-directions: (
+  "up": 135deg,
+  "down": -45deg,
+  "left": 45deg,
+  "right": -135deg,
+);
+
+$breakpoints: (
+  "sm": 600px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px,
+);
+
+$block-spacing: clamp(40px, 5vw, 80px);
+$inline-spacing: max(16px, 6.25vw);

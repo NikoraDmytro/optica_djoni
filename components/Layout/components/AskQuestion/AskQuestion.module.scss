@@ -1,6 +1,6 @@
 @use "../../../../shared/styles/base";
 @use "../../../../shared/styles/variables";
-@use "../../../../shared/styles/components";
+@use "../../../../shared/styles/components/containers";
 
 .AskQuestionContainer {
   padding: 0;
@@ -18,7 +18,7 @@
   max-width: 30.5em;
   h1 {
     margin: 0.5em 0;
-    color: variables.$darkBlue;
+    color: variables.$dark_main;
   }
   p {
     margin: 0;
@@ -27,5 +27,5 @@
 }
 
 .formWrapper {
-  background-color: variables.$lightBlue;
+  background-color: variables.$main;
 }

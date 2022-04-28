@@ -1,5 +1,6 @@
 @use "../../../../../shared/styles/base";
-@use "../../../../../shared/styles/components";
+@use "../../../../../shared/styles/components/containers";
+@use "../../../../../shared/styles/components/text";
 
 .headerContent {
   @include base.flexCenter();

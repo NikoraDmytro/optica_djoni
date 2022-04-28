@@ -1,0 +1,27 @@
+@use "../base";
+@use "../variables";
+
+$sp-inline: variables.$inline-spacing;
+$sp-block: variables.$block-spacing;
+$sp-combined: $sp-block $sp-inline;
+
+%blockContainer {
+  margin: $sp-combined;
+  padding: $sp-combined;
+}
+
+.container_blue {
+  @extend %blockContainer;
+  background-color: variables.$dark_back;
+}
+
+.container_white {
+  @extend %blockContainer;
+  background-color: white;
+}
+
+.icon_container {
+  @include base.flexCenter();
+  @include base.setSize(120px);
+  background-color: variables.$back;
+}

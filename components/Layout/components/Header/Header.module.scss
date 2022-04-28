@@ -3,8 +3,7 @@
 .header {
   @include base.flexCenter();
   width: 100%;
-  height: 9em;
-  padding: 1em;
+  padding: 1em clamp(1em, 6.25%, 100px);
 }
 
 .headerMenu {

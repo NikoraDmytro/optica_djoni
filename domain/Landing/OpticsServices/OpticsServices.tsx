@@ -48,7 +48,7 @@ export const OpticsServices = () => {
               <h1 className={styles.serviceName}>{service.title}</h1>
 
               <Link href={service.link} passHref>
-                <button className={styles.learnMoreButton}>
+                <button className={styles.btn_primary}>
                   <a>Подробнее</a>
                 </button>
               </Link>
